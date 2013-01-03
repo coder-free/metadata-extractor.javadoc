@@ -1,0 +1,828 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+PngChunkType (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.imaging.png.PngChunkType class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="PngChunkType (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PngChunkType.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkReader.html" title="class in com.drew.imaging.png"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/png/PngColorType.html" title="enum in com.drew.imaging.png"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/png/PngChunkType.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PngChunkType.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.imaging.png</FONT>
+<BR>
+Class PngChunkType</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.imaging.png.PngChunkType</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>PngChunkType</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#bKGD">bKGD</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#cHRM">cHRM</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#gAMA">gAMA</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#hIST">hIST</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#iCCP">iCCP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#IDAT">IDAT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#IEND">IEND</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#IHDR">IHDR</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denotes a critical <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains basic information about the PNG image.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#iTXt">iTXt</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#pHYs">pHYs</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#PLTE">PLTE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denotes a critical <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains palette entries.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#sBIT">sBIT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#sPLT">sPLT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#sRGB">sRGB</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#tEXt">tEXt</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Denotes an ancillary <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains textual data, having first a keyword and then a value.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#tIME">tIME</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#tRNS">tRNS</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#zTXt">zTXt</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#PngChunkType(byte[])">PngChunkType</A></B>(byte[]&nbsp;bytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#PngChunkType(java.lang.String)">PngChunkType</A></B>(java.lang.String&nbsp;identifier)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#PngChunkType(java.lang.String, boolean)">PngChunkType</A></B>(java.lang.String&nbsp;identifier,
+             boolean&nbsp;multipleAllowed)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#areMultipleAllowed()">areMultipleAllowed</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#equals(java.lang.Object)">equals</A></B>(java.lang.Object&nbsp;o)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#getIdentifier()">getIdentifier</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#hashCode()">hashCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#isAncillary()">isAncillary</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#isCritical()">isCritical</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#isPrivate()">isPrivate</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#isSafeToCopy()">isSafeToCopy</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/png/PngChunkType.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="IHDR"><!-- --></A><H3>
+IHDR</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>IHDR</B></PRE>
+<DL>
+<DD>Denotes a critical <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains basic information about the PNG image.
+ This must be the first chunk in the data sequence, and may only occur once.
+ <p/>
+ The format is:
+ <ul>
+     <li><b>pixel width</b> 4 bytes, unsigned and greater than zero</li>
+     <li><b>pixel height</b> 4 bytes, unsigned and greater than zero</li>
+     <li><b>bit depth</b> 1 byte, number of bits per sample or per palette index (not per pixel)</li>
+     <li><b>color type</b> 1 byte, maps to <A HREF="../../../../com/drew/imaging/png/PngColorType.html" title="enum in com.drew.imaging.png"><CODE>PngColorType</CODE></A> enum</li>
+     <li><b>compression method</b> 1 byte, currently only a value of zero (deflate/inflate) is in the standard</li>
+     <li><b>filter method</b> 1 byte, currently only a value of zero (adaptive filtering with five basic filter types) is in the standard</li>
+     <li><b>interlace method</b> 1 byte, indicates the transmission order of image data, currently only 0 (no interlace) and 1 (Adam7 interlace) are in the standard</li>
+ </ul>
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="PLTE"><!-- --></A><H3>
+PLTE</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>PLTE</B></PRE>
+<DL>
+<DD>Denotes a critical <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains palette entries.
+ This chunk should only appear for a <A HREF="../../../../com/drew/imaging/png/PngColorType.html" title="enum in com.drew.imaging.png"><CODE>PngColorType</CODE></A> of <code>IndexedColor</code>,
+ and may only occur once in the PNG data sequence.
+ <p/>
+ The chunk contains between one and 256 entries, each of three bytes:
+ <ul>
+     <li><b>red</b> 1 byte</li>
+     <li><b>green</b> 1 byte</li>
+     <li><b>blue</b> 1 byte</li>
+ </ul>
+ The number of entries is determined by the chunk length. A chunk length indivisible by three is an error.
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="IDAT"><!-- --></A><H3>
+IDAT</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>IDAT</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="IEND"><!-- --></A><H3>
+IEND</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>IEND</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="cHRM"><!-- --></A><H3>
+cHRM</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>cHRM</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="gAMA"><!-- --></A><H3>
+gAMA</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>gAMA</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="iCCP"><!-- --></A><H3>
+iCCP</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>iCCP</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="sBIT"><!-- --></A><H3>
+sBIT</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>sBIT</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="sRGB"><!-- --></A><H3>
+sRGB</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>sRGB</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="bKGD"><!-- --></A><H3>
+bKGD</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>bKGD</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="hIST"><!-- --></A><H3>
+hIST</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>hIST</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="tRNS"><!-- --></A><H3>
+tRNS</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>tRNS</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="pHYs"><!-- --></A><H3>
+pHYs</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>pHYs</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="sPLT"><!-- --></A><H3>
+sPLT</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>sPLT</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="tIME"><!-- --></A><H3>
+tIME</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>tIME</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="iTXt"><!-- --></A><H3>
+iTXt</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>iTXt</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="tEXt"><!-- --></A><H3>
+tEXt</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>tEXt</B></PRE>
+<DL>
+<DD>Denotes an ancillary <A HREF="../../../../com/drew/imaging/png/PngChunk.html" title="class in com.drew.imaging.png"><CODE>PngChunk</CODE></A> that contains textual data, having first a keyword and then a value.
+ If multiple text data keywords are needed, then multiple chunks are included in the PNG data stream.
+ <p/>
+ The format is:
+ <ul>
+     <li><b>keyword</b> 1-79 bytes</li>
+     <li><b>null separator</b> 1 byte (\0)</li>
+     <li><b>text string</b> 0 or more bytes</li>
+ </ul>
+ Text is interpreted according to the Latin-1 character set [ISO-8859-1].
+ Newlines should be represented by a single linefeed character (0x9).
+<P>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="zTXt"><!-- --></A><H3>
+zTXt</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/png/PngChunkType.html" title="class in com.drew.imaging.png">PngChunkType</A> <B>zTXt</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="PngChunkType(java.lang.String)"><!-- --></A><H3>
+PngChunkType</H3>
+<PRE>
+public <B>PngChunkType</B>(java.lang.String&nbsp;identifier)</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="PngChunkType(java.lang.String, boolean)"><!-- --></A><H3>
+PngChunkType</H3>
+<PRE>
+public <B>PngChunkType</B>(java.lang.String&nbsp;identifier,
+                    boolean&nbsp;multipleAllowed)</PRE>
+<DL>
+</DL>
+<HR>
+
+<A NAME="PngChunkType(byte[])"><!-- --></A><H3>
+PngChunkType</H3>
+<PRE>
+public <B>PngChunkType</B>(byte[]&nbsp;bytes)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="isCritical()"><!-- --></A><H3>
+isCritical</H3>
+<PRE>
+public boolean <B>isCritical</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isAncillary()"><!-- --></A><H3>
+isAncillary</H3>
+<PRE>
+public boolean <B>isAncillary</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isPrivate()"><!-- --></A><H3>
+isPrivate</H3>
+<PRE>
+public boolean <B>isPrivate</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isSafeToCopy()"><!-- --></A><H3>
+isSafeToCopy</H3>
+<PRE>
+public boolean <B>isSafeToCopy</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="areMultipleAllowed()"><!-- --></A><H3>
+areMultipleAllowed</H3>
+<PRE>
+public boolean <B>areMultipleAllowed</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIdentifier()"><!-- --></A><H3>
+getIdentifier</H3>
+<PRE>
+public java.lang.String <B>getIdentifier</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public java.lang.String <B>toString</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>toString</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="equals(java.lang.Object)"><!-- --></A><H3>
+equals</H3>
+<PRE>
+public boolean <B>equals</B>(java.lang.Object&nbsp;o)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>equals</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="hashCode()"><!-- --></A><H3>
+hashCode</H3>
+<PRE>
+public int <B>hashCode</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>hashCode</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/PngChunkType.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/imaging/png/PngChunkReader.html" title="class in com.drew.imaging.png"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/png/PngColorType.html" title="enum in com.drew.imaging.png"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/png/PngChunkType.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="PngChunkType.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

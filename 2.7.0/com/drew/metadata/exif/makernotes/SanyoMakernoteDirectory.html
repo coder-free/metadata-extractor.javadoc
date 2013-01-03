@@ -1,0 +1,835 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+SanyoMakernoteDirectory (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="SanyoMakernoteDirectory (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SanyoMakernoteDirectory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/SigmaMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SanyoMakernoteDirectory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.metadata.exif.makernotes</FONT>
+<BR>
+Class SanyoMakernoteDirectory</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">com.drew.metadata.Directory</A>
+      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>SanyoMakernoteDirectory</B><DT>extends <A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></DL>
+</PRE>
+
+<P>
+Describes tags specific to Sanyo cameras.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#_tagNameMap">_tagNameMap</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_CAMERA_ID">TAG_CAMERA_ID</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_COLOR_ADJUSTMENT_MODE">TAG_COLOR_ADJUSTMENT_MODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_DATA_DUMP">TAG_DATA_DUMP</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_DIGITAL_ZOOM">TAG_DIGITAL_ZOOM</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_DIGITAL_ZOOM_ON">TAG_DIGITAL_ZOOM_ON</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_FLASH_MODE">TAG_FLASH_MODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_FLICKER_REDUCE">TAG_FLICKER_REDUCE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_LIGHT_SOURCE_SPECIAL">TAG_LIGHT_SOURCE_SPECIAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_MACRO">TAG_MACRO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_MAKERNOTE_OFFSET">TAG_MAKERNOTE_OFFSET</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO">TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_OPTICAL_ZOOM_ON">TAG_OPTICAL_ZOOM_ON</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_PICT_INFO">TAG_PICT_INFO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_PRINT_IM">TAG_PRINT_IM</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_QUICK_SHOT">TAG_QUICK_SHOT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_RECORD_SHUTTER_RELEASE">TAG_RECORD_SHUTTER_RELEASE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_RESAVED">TAG_RESAVED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SANYO_QUALITY">TAG_SANYO_QUALITY</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SANYO_THUMBNAIL">TAG_SANYO_THUMBNAIL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SCENE_SELECT">TAG_SCENE_SELECT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SELF_TIMER">TAG_SELF_TIMER</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SEQUENCE_SHOT_INTERVAL">TAG_SEQUENCE_SHOT_INTERVAL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SEQUENTIAL_SHOT">TAG_SEQUENTIAL_SHOT</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SOFTWARE_VERSION">TAG_SOFTWARE_VERSION</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_SPECIAL_MODE">TAG_SPECIAL_MODE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_VOICE_MEMO">TAG_VOICE_MEMO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#TAG_WIDE_RANGE">TAG_WIDE_RANGE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="fields_inherited_from_class_com.drew.metadata.Directory"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Fields inherited from class com.drew.metadata.<A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#_definedTagList">_definedTagList</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#_descriptor">_descriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#_tagMap">_tagMap</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#SanyoMakernoteDirectory()">SanyoMakernoteDirectory</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the name of the directory, for display purposes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#getTagNameMap()">getTagNameMap</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the map of tag names, hashed by tag type identifier.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.drew.metadata.Directory"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.drew.metadata.<A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#addError(java.lang.String)">addError</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#containsTag(int)">containsTag</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBoolean(int)">getBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBooleanObject(int)">getBooleanObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getByteArray(int)">getByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int, java.util.TimeZone)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDescription(int)">getDescription</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDouble(int)">getDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDoubleObject(int)">getDoubleObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrorCount()">getErrorCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrors()">getErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloat(int)">getFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloatObject(int)">getFloatObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInt(int)">getInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getIntArray(int)">getIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInteger(int)">getInteger</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLong(int)">getLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLongObject(int)">getLongObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getObject(int)">getObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRational(int)">getRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRationalArray(int)">getRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int, java.lang.String)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getStringArray(int)">getStringArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagCount()">getTagCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagName(int)">getTagName</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTags()">getTags</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#hasErrors()">hasErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setBoolean(int, boolean)">setBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">setByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDate(int, java.util.Date)">setDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDescriptor(com.drew.metadata.TagDescriptor)">setDescriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDouble(int, double)">setDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDoubleArray(int, double[])">setDoubleArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloat(int, float)">setFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloatArray(int, float[])">setFloatArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setInt(int, int)">setInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">setIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setLong(int, long)">setLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObject(int, java.lang.Object)">setObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRational(int, com.drew.lang.Rational)">setRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setString(int, java.lang.String)">setString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setStringArray(int, java.lang.String[])">setStringArray</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="TAG_MAKERNOTE_OFFSET"><!-- --></A><H3>
+TAG_MAKERNOTE_OFFSET</H3>
+<PRE>
+public static final int <B>TAG_MAKERNOTE_OFFSET</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_MAKERNOTE_OFFSET">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SANYO_THUMBNAIL"><!-- --></A><H3>
+TAG_SANYO_THUMBNAIL</H3>
+<PRE>
+public static final int <B>TAG_SANYO_THUMBNAIL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SANYO_THUMBNAIL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SPECIAL_MODE"><!-- --></A><H3>
+TAG_SPECIAL_MODE</H3>
+<PRE>
+public static final int <B>TAG_SPECIAL_MODE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SPECIAL_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SANYO_QUALITY"><!-- --></A><H3>
+TAG_SANYO_QUALITY</H3>
+<PRE>
+public static final int <B>TAG_SANYO_QUALITY</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SANYO_QUALITY">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_MACRO"><!-- --></A><H3>
+TAG_MACRO</H3>
+<PRE>
+public static final int <B>TAG_MACRO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_MACRO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_DIGITAL_ZOOM"><!-- --></A><H3>
+TAG_DIGITAL_ZOOM</H3>
+<PRE>
+public static final int <B>TAG_DIGITAL_ZOOM</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_DIGITAL_ZOOM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SOFTWARE_VERSION"><!-- --></A><H3>
+TAG_SOFTWARE_VERSION</H3>
+<PRE>
+public static final int <B>TAG_SOFTWARE_VERSION</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SOFTWARE_VERSION">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_PICT_INFO"><!-- --></A><H3>
+TAG_PICT_INFO</H3>
+<PRE>
+public static final int <B>TAG_PICT_INFO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_PICT_INFO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_CAMERA_ID"><!-- --></A><H3>
+TAG_CAMERA_ID</H3>
+<PRE>
+public static final int <B>TAG_CAMERA_ID</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_CAMERA_ID">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SEQUENTIAL_SHOT"><!-- --></A><H3>
+TAG_SEQUENTIAL_SHOT</H3>
+<PRE>
+public static final int <B>TAG_SEQUENTIAL_SHOT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SEQUENTIAL_SHOT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_WIDE_RANGE"><!-- --></A><H3>
+TAG_WIDE_RANGE</H3>
+<PRE>
+public static final int <B>TAG_WIDE_RANGE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_WIDE_RANGE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_COLOR_ADJUSTMENT_MODE"><!-- --></A><H3>
+TAG_COLOR_ADJUSTMENT_MODE</H3>
+<PRE>
+public static final int <B>TAG_COLOR_ADJUSTMENT_MODE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_COLOR_ADJUSTMENT_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_QUICK_SHOT"><!-- --></A><H3>
+TAG_QUICK_SHOT</H3>
+<PRE>
+public static final int <B>TAG_QUICK_SHOT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_QUICK_SHOT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SELF_TIMER"><!-- --></A><H3>
+TAG_SELF_TIMER</H3>
+<PRE>
+public static final int <B>TAG_SELF_TIMER</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SELF_TIMER">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_VOICE_MEMO"><!-- --></A><H3>
+TAG_VOICE_MEMO</H3>
+<PRE>
+public static final int <B>TAG_VOICE_MEMO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_VOICE_MEMO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_RECORD_SHUTTER_RELEASE"><!-- --></A><H3>
+TAG_RECORD_SHUTTER_RELEASE</H3>
+<PRE>
+public static final int <B>TAG_RECORD_SHUTTER_RELEASE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_RECORD_SHUTTER_RELEASE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_FLICKER_REDUCE"><!-- --></A><H3>
+TAG_FLICKER_REDUCE</H3>
+<PRE>
+public static final int <B>TAG_FLICKER_REDUCE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_FLICKER_REDUCE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_OPTICAL_ZOOM_ON"><!-- --></A><H3>
+TAG_OPTICAL_ZOOM_ON</H3>
+<PRE>
+public static final int <B>TAG_OPTICAL_ZOOM_ON</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_OPTICAL_ZOOM_ON">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_DIGITAL_ZOOM_ON"><!-- --></A><H3>
+TAG_DIGITAL_ZOOM_ON</H3>
+<PRE>
+public static final int <B>TAG_DIGITAL_ZOOM_ON</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_DIGITAL_ZOOM_ON">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_LIGHT_SOURCE_SPECIAL"><!-- --></A><H3>
+TAG_LIGHT_SOURCE_SPECIAL</H3>
+<PRE>
+public static final int <B>TAG_LIGHT_SOURCE_SPECIAL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_LIGHT_SOURCE_SPECIAL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_RESAVED"><!-- --></A><H3>
+TAG_RESAVED</H3>
+<PRE>
+public static final int <B>TAG_RESAVED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_RESAVED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SCENE_SELECT"><!-- --></A><H3>
+TAG_SCENE_SELECT</H3>
+<PRE>
+public static final int <B>TAG_SCENE_SELECT</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SCENE_SELECT">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO"><!-- --></A><H3>
+TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO</H3>
+<PRE>
+public static final int <B>TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_MANUAL_FOCUS_DISTANCE_OR_FACE_INFO">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_SEQUENCE_SHOT_INTERVAL"><!-- --></A><H3>
+TAG_SEQUENCE_SHOT_INTERVAL</H3>
+<PRE>
+public static final int <B>TAG_SEQUENCE_SHOT_INTERVAL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_SEQUENCE_SHOT_INTERVAL">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_FLASH_MODE"><!-- --></A><H3>
+TAG_FLASH_MODE</H3>
+<PRE>
+public static final int <B>TAG_FLASH_MODE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_FLASH_MODE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_PRINT_IM"><!-- --></A><H3>
+TAG_PRINT_IM</H3>
+<PRE>
+public static final int <B>TAG_PRINT_IM</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_PRINT_IM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_DATA_DUMP"><!-- --></A><H3>
+TAG_DATA_DUMP</H3>
+<PRE>
+public static final int <B>TAG_DATA_DUMP</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.SanyoMakernoteDirectory.TAG_DATA_DUMP">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="_tagNameMap"><!-- --></A><H3>
+_tagNameMap</H3>
+<PRE>
+protected static final java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt; <B>_tagNameMap</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SanyoMakernoteDirectory()"><!-- --></A><H3>
+SanyoMakernoteDirectory</H3>
+<PRE>
+public <B>SanyoMakernoteDirectory</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getName()"><!-- --></A><H3>
+getName</H3>
+<PRE>
+public java.lang.String <B>getName</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/drew/metadata/Directory.html#getName()">Directory</A></CODE></B></DD>
+<DD>Provides the name of the directory, for display purposes.  E.g. <code>Exif</code>
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#getName()">getName</A></CODE> in class <CODE><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the name of the directory</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTagNameMap()"><!-- --></A><H3>
+getTagNameMap</H3>
+<PRE>
+protected java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt; <B>getTagNameMap</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/drew/metadata/Directory.html#getTagNameMap()">Directory</A></CODE></B></DD>
+<DD>Provides the map of tag names, hashed by tag type identifier.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#getTagNameMap()">getTagNameMap</A></CODE> in class <CODE><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the map of tag names</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SanyoMakernoteDirectory.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/SigmaMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../../index.html?com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SanyoMakernoteDirectory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

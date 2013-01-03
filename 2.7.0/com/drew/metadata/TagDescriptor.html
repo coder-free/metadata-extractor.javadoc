@@ -1,0 +1,608 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+TagDescriptor (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.metadata.TagDescriptor class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="TagDescriptor (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TagDescriptor.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/metadata/Tag.html" title="class in com.drew.metadata"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/metadata/TagDescriptor.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TagDescriptor.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.metadata</FONT>
+<BR>
+Class TagDescriptor&lt;T extends <A HREF="../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>com.drew.metadata.TagDescriptor&lt;T&gt;</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../com/drew/metadata/adobe/AdobeJpegDescriptor.html" title="class in com.drew.metadata.adobe">AdobeJpegDescriptor</A>, <A HREF="../../../com/drew/metadata/bmp/BmpHeaderDescriptor.html" title="class in com.drew.metadata.bmp">BmpHeaderDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/CanonMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">CanonMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/CasioType1MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">CasioType1MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/CasioType2MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">CasioType2MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/DefaultTagDescriptor.html" title="class in com.drew.metadata">DefaultTagDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/ExifIFD0Descriptor.html" title="class in com.drew.metadata.exif">ExifIFD0Descriptor</A>, <A HREF="../../../com/drew/metadata/exif/ExifInteropDescriptor.html" title="class in com.drew.metadata.exif">ExifInteropDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/ExifSubIFDDescriptor.html" title="class in com.drew.metadata.exif">ExifSubIFDDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/ExifThumbnailDescriptor.html" title="class in com.drew.metadata.exif">ExifThumbnailDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/FujifilmMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">FujifilmMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/gif/GifHeaderDescriptor.html" title="class in com.drew.metadata.gif">GifHeaderDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/GpsDescriptor.html" title="class in com.drew.metadata.exif">GpsDescriptor</A>, <A HREF="../../../com/drew/metadata/icc/IccDescriptor.html" title="class in com.drew.metadata.icc">IccDescriptor</A>, <A HREF="../../../com/drew/metadata/iptc/IptcDescriptor.html" title="class in com.drew.metadata.iptc">IptcDescriptor</A>, <A HREF="../../../com/drew/metadata/jfif/JfifDescriptor.html" title="class in com.drew.metadata.jfif">JfifDescriptor</A>, <A HREF="../../../com/drew/metadata/jpeg/JpegCommentDescriptor.html" title="class in com.drew.metadata.jpeg">JpegCommentDescriptor</A>, <A HREF="../../../com/drew/metadata/jpeg/JpegDescriptor.html" title="class in com.drew.metadata.jpeg">JpegDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/KodakMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">KodakMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/KyoceraMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">KyoceraMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/LeicaMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">LeicaMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/NikonType1MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">NikonType1MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/NikonType2MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">NikonType2MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">OlympusMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/PanasonicMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">PanasonicMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/PentaxMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">PentaxMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/photoshop/PhotoshopDescriptor.html" title="class in com.drew.metadata.photoshop">PhotoshopDescriptor</A>, <A HREF="../../../com/drew/metadata/png/PngDescriptor.html" title="class in com.drew.metadata.png">PngDescriptor</A>, <A HREF="../../../com/drew/metadata/photoshop/PsdHeaderDescriptor.html" title="class in com.drew.metadata.photoshop">PsdHeaderDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">SanyoMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/SigmaMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">SigmaMakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/SonyType1MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">SonyType1MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/exif/makernotes/SonyType6MakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes">SonyType6MakernoteDescriptor</A>, <A HREF="../../../com/drew/metadata/xmp/XmpDescriptor.html" title="class in com.drew.metadata.xmp">XmpDescriptor</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>TagDescriptor&lt;T extends <A HREF="../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+Base class for all tag descriptor classes.  Implementations are responsible for
+ providing the human-readable string representation of tag values stored in a directory.
+ The directory is provided to the tag descriptor via its constructor.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../com/drew/metadata/TagDescriptor.html" title="type parameter in TagDescriptor">T</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#_directory">_directory</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#TagDescriptor(T)">TagDescriptor</A></B>(<A HREF="../../../com/drew/metadata/TagDescriptor.html" title="type parameter in TagDescriptor">T</A>&nbsp;directory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#convertBytesToVersionString(int[], int)">convertBytesToVersionString</A></B>(int[]&nbsp;components,
+                            int&nbsp;majorDigits)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takes a series of 4 bytes from the specified offset, and converts these to a
+ well-known version number, where possible.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#get7BitStringFromBytes(int)">get7BitStringFromBytes</A></B>(int&nbsp;tagType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getAsciiStringFromBytes(int)">getAsciiStringFromBytes</A></B>(int&nbsp;tag)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getBitFlagDescription(int, java.lang.Object...)">getBitFlagDescription</A></B>(int&nbsp;tagType,
+                      java.lang.Object...&nbsp;labels)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LSB first.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getByteLengthDescription(int)">getByteLengthDescription</A></B>(int&nbsp;tagType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getDecimalRational(int, int)">getDecimalRational</A></B>(int&nbsp;tagType,
+                   int&nbsp;decimalPlaces)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getDescription(int)">getDescription</A></B>(int&nbsp;tagType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a descriptive value of the the specified tag for this image.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getEpochTimeDescription(int)">getEpochTimeDescription</A></B>(int&nbsp;tagType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getFormattedFloat(int, java.lang.String)">getFormattedFloat</A></B>(int&nbsp;tagType,
+                  java.lang.String&nbsp;format)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getFormattedInt(int, java.lang.String)">getFormattedInt</A></B>(int&nbsp;tagType,
+                java.lang.String&nbsp;format)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getFormattedString(int, java.lang.String)">getFormattedString</A></B>(int&nbsp;tagType,
+                   java.lang.String&nbsp;format)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getIndexedDescription(int, int, java.lang.String...)">getIndexedDescription</A></B>(int&nbsp;tagType,
+                      int&nbsp;baseIndex,
+                      java.lang.String...&nbsp;descriptions)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getIndexedDescription(int, java.lang.String...)">getIndexedDescription</A></B>(int&nbsp;tagType,
+                      java.lang.String...&nbsp;descriptions)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getSimpleRational(int)">getSimpleRational</A></B>(int&nbsp;tagType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/metadata/TagDescriptor.html#getVersionBytesDescription(int, int)">getVersionBytesDescription</A></B>(int&nbsp;tagType,
+                           int&nbsp;majorDigits)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="_directory"><!-- --></A><H3>
+_directory</H3>
+<PRE>
+protected final <A HREF="../../../com/drew/metadata/TagDescriptor.html" title="type parameter in TagDescriptor">T</A> extends <A HREF="../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A> <B>_directory</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="TagDescriptor(com.drew.metadata.Directory)"><!-- --></A><A NAME="TagDescriptor(T)"><!-- --></A><H3>
+TagDescriptor</H3>
+<PRE>
+public <B>TagDescriptor</B>(<A HREF="../../../com/drew/metadata/TagDescriptor.html" title="type parameter in TagDescriptor">T</A>&nbsp;directory)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getDescription(int)"><!-- --></A><H3>
+getDescription</H3>
+<PRE>
+public java.lang.String <B>getDescription</B>(int&nbsp;tagType)</PRE>
+<DL>
+<DD>Returns a descriptive value of the the specified tag for this image.
+ Where possible, known values will be substituted here in place of the raw
+ tokens actually kept in the metadata segment.  If no substitution is
+ available, the value provided by <code>getString(tagType)</code> will be returned.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>tagType</CODE> - the tag to find a description for
+<DT><B>Returns:</B><DD>a description of the image's value for the specified tag, or
+         <code>null</code> if the tag hasn't been defined.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="convertBytesToVersionString(int[], int)"><!-- --></A><H3>
+convertBytesToVersionString</H3>
+<PRE>
+public static java.lang.String <B>convertBytesToVersionString</B>(int[]&nbsp;components,
+                                                           int&nbsp;majorDigits)</PRE>
+<DL>
+<DD>Takes a series of 4 bytes from the specified offset, and converts these to a
+ well-known version number, where possible.
+ <p/>
+ Two different formats are processed:
+ <ul>
+ <li>[30 32 31 30] -&gt; 2.10</li>
+ <li>[0 1 0 0] -&gt; 1.00</li>
+ </ul>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>components</CODE> - the four version values<DD><CODE>majorDigits</CODE> - the number of components to be
+<DT><B>Returns:</B><DD>the version as a string of form "2.10" or null if the argument cannot be converted</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getVersionBytesDescription(int, int)"><!-- --></A><H3>
+getVersionBytesDescription</H3>
+<PRE>
+protected java.lang.String <B>getVersionBytesDescription</B>(int&nbsp;tagType,
+                                                      int&nbsp;majorDigits)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIndexedDescription(int, java.lang.String...)"><!-- --></A><H3>
+getIndexedDescription</H3>
+<PRE>
+protected java.lang.String <B>getIndexedDescription</B>(int&nbsp;tagType,
+                                                 java.lang.String...&nbsp;descriptions)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIndexedDescription(int, int, java.lang.String...)"><!-- --></A><H3>
+getIndexedDescription</H3>
+<PRE>
+protected java.lang.String <B>getIndexedDescription</B>(int&nbsp;tagType,
+                                                 int&nbsp;baseIndex,
+                                                 java.lang.String...&nbsp;descriptions)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getByteLengthDescription(int)"><!-- --></A><H3>
+getByteLengthDescription</H3>
+<PRE>
+protected java.lang.String <B>getByteLengthDescription</B>(int&nbsp;tagType)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSimpleRational(int)"><!-- --></A><H3>
+getSimpleRational</H3>
+<PRE>
+protected java.lang.String <B>getSimpleRational</B>(int&nbsp;tagType)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDecimalRational(int, int)"><!-- --></A><H3>
+getDecimalRational</H3>
+<PRE>
+protected java.lang.String <B>getDecimalRational</B>(int&nbsp;tagType,
+                                              int&nbsp;decimalPlaces)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFormattedInt(int, java.lang.String)"><!-- --></A><H3>
+getFormattedInt</H3>
+<PRE>
+protected java.lang.String <B>getFormattedInt</B>(int&nbsp;tagType,
+                                           java.lang.String&nbsp;format)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFormattedFloat(int, java.lang.String)"><!-- --></A><H3>
+getFormattedFloat</H3>
+<PRE>
+protected java.lang.String <B>getFormattedFloat</B>(int&nbsp;tagType,
+                                             java.lang.String&nbsp;format)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFormattedString(int, java.lang.String)"><!-- --></A><H3>
+getFormattedString</H3>
+<PRE>
+protected java.lang.String <B>getFormattedString</B>(int&nbsp;tagType,
+                                              java.lang.String&nbsp;format)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getEpochTimeDescription(int)"><!-- --></A><H3>
+getEpochTimeDescription</H3>
+<PRE>
+protected java.lang.String <B>getEpochTimeDescription</B>(int&nbsp;tagType)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBitFlagDescription(int, java.lang.Object...)"><!-- --></A><H3>
+getBitFlagDescription</H3>
+<PRE>
+protected java.lang.String <B>getBitFlagDescription</B>(int&nbsp;tagType,
+                                                 java.lang.Object...&nbsp;labels)</PRE>
+<DL>
+<DD>LSB first. Labels may be null, a String, or a String[2] with (low label,high label) values.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="get7BitStringFromBytes(int)"><!-- --></A><H3>
+get7BitStringFromBytes</H3>
+<PRE>
+protected java.lang.String <B>get7BitStringFromBytes</B>(int&nbsp;tagType)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getAsciiStringFromBytes(int)"><!-- --></A><H3>
+getAsciiStringFromBytes</H3>
+<PRE>
+protected java.lang.String <B>getAsciiStringFromBytes</B>(int&nbsp;tag)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TagDescriptor.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/metadata/Tag.html" title="class in com.drew.metadata"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/metadata/TagDescriptor.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TagDescriptor.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

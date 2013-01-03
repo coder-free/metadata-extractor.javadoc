@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+RandomAccessFileReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.lang.RandomAccessFileReader class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="RandomAccessFileReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RandomAccessFileReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/lang/NullOutputStream.html" title="class in com.drew.lang"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/lang/RandomAccessFileReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RandomAccessFileReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.lang</FONT>
+<BR>
+Class RandomAccessFileReader</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">com.drew.lang.RandomAccessReader</A>
+      <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>com.drew.lang.RandomAccessFileReader</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>RandomAccessFileReader</B><DT>extends <A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></DL>
+</PRE>
+
+<P>
+Provides methods to read specific values from a <CODE>RandomAccessFile</CODE>, with a consistent, checked exception structure for
+ issues.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#RandomAccessFileReader(java.io.RandomAccessFile)">RandomAccessFileReader</A></B>(java.io.RandomAccessFile&nbsp;file)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#getByte(int)">getByte</A></B>(int&nbsp;index)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the byte value at the specified byte <code>index</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#getBytes(int, int)">getBytes</A></B>(int&nbsp;index,
+         int&nbsp;count)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the required number of bytes from the specified index from the underlying source.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#getLength()">getLength</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the length of the data source in bytes.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#isValidIndex(int, int)">isValidIndex</A></B>(int&nbsp;index,
+             int&nbsp;bytesRequested)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/RandomAccessFileReader.html#validateIndex(int, int)">validateIndex</A></B>(int&nbsp;index,
+              int&nbsp;bytesRequested)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensures that the buffered bytes extend to cover the specified index.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.drew.lang.RandomAccessReader"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class com.drew.lang.<A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getDouble64(int)">getDouble64</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getFloat32(int)">getFloat32</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getInt16(int)">getInt16</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getInt32(int)">getInt32</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getInt64(int)">getInt64</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getInt8(int)">getInt8</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getNullTerminatedString(int, int)">getNullTerminatedString</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getS15Fixed16(int)">getS15Fixed16</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getString(int, int)">getString</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getString(int, int, java.lang.String)">getString</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getUInt16(int)">getUInt16</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getUInt32(int)">getUInt32</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#getUInt8(int)">getUInt8</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#isMotorolaByteOrder()">isMotorolaByteOrder</A>, <A HREF="../../../com/drew/lang/RandomAccessReader.html#setMotorolaByteOrder(boolean)">setMotorolaByteOrder</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="RandomAccessFileReader(java.io.RandomAccessFile)"><!-- --></A><H3>
+RandomAccessFileReader</H3>
+<PRE>
+public <B>RandomAccessFileReader</B>(java.io.RandomAccessFile&nbsp;file)
+                       throws java.io.IOException</PRE>
+<DL>
+<DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getLength()"><!-- --></A><H3>
+getLength</H3>
+<PRE>
+public long <B>getLength</B>()</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getLength()">RandomAccessReader</A></CODE></B></DD>
+<DD>Returns the length of the data source in bytes.
+ <p/>
+ This is a simple operation for implementations (such as <A HREF="../../../com/drew/lang/RandomAccessFileReader.html" title="class in com.drew.lang"><CODE>RandomAccessFileReader</CODE></A> and
+ <A HREF="../../../com/drew/lang/ByteArrayReader.html" title="class in com.drew.lang"><CODE>ByteArrayReader</CODE></A>) that have the entire data source available.
+ <p/>
+ Users of this method must be aware that sequentially accessed implementations such as
+ <A HREF="../../../com/drew/lang/RandomAccessStreamReader.html" title="class in com.drew.lang"><CODE>RandomAccessStreamReader</CODE></A> will have to read and buffer the entire data source in
+ order to determine the length.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getLength()">getLength</A></CODE> in class <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the length of the data source, in bytes.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getByte(int)"><!-- --></A><H3>
+getByte</H3>
+<PRE>
+protected byte <B>getByte</B>(int&nbsp;index)
+                throws java.io.IOException</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getByte(int)">RandomAccessReader</A></CODE></B></DD>
+<DD>Gets the byte value at the specified byte <code>index</code>.
+ <p/>
+ Implementations should not perform any bounds checking in this method. That should be performed
+ in <code>validateIndex</code> and <code>isValidIndex</code>.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getByte(int)">getByte</A></CODE> in class <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>index</CODE> - The index from which to read the byte
+<DT><B>Returns:</B><DD>The read byte value
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../com/drew/lang/BufferBoundsException.html" title="class in com.drew.lang">BufferBoundsException</A></CODE> - if the requested byte is beyond the end of the underlying data source
+<DD><CODE>java.io.IOException</CODE> - if the byte is unable to be read</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBytes(int, int)"><!-- --></A><H3>
+getBytes</H3>
+<PRE>
+public byte[] <B>getBytes</B>(int&nbsp;index,
+                       int&nbsp;count)
+                throws java.io.IOException</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getBytes(int, int)">RandomAccessReader</A></CODE></B></DD>
+<DD>Returns the required number of bytes from the specified index from the underlying source.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#getBytes(int, int)">getBytes</A></CODE> in class <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>index</CODE> - The index from which the bytes begins in the underlying source<DD><CODE>count</CODE> - The number of bytes to be returned
+<DT><B>Returns:</B><DD>The requested bytes
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../com/drew/lang/BufferBoundsException.html" title="class in com.drew.lang">BufferBoundsException</A></CODE> - if the requested bytes extend beyond the end of the underlying data source
+<DD><CODE>java.io.IOException</CODE> - if the byte is unable to be read</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isValidIndex(int, int)"><!-- --></A><H3>
+isValidIndex</H3>
+<PRE>
+protected boolean <B>isValidIndex</B>(int&nbsp;index,
+                               int&nbsp;bytesRequested)
+                        throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#isValidIndex(int, int)">isValidIndex</A></CODE> in class <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="validateIndex(int, int)"><!-- --></A><H3>
+validateIndex</H3>
+<PRE>
+protected void <B>validateIndex</B>(int&nbsp;index,
+                             int&nbsp;bytesRequested)
+                      throws java.io.IOException</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#validateIndex(int, int)">RandomAccessReader</A></CODE></B></DD>
+<DD>Ensures that the buffered bytes extend to cover the specified index. If not, an attempt is made
+ to read to that point.
+ <p/>
+ If the stream ends before the point is reached, a <A HREF="../../../com/drew/lang/BufferBoundsException.html" title="class in com.drew.lang"><CODE>BufferBoundsException</CODE></A> is raised.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html#validateIndex(int, int)">validateIndex</A></CODE> in class <CODE><A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>index</CODE> - the index from which the required bytes start<DD><CODE>bytesRequested</CODE> - the number of bytes which are required
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - if the stream ends before the required number of bytes are acquired</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/RandomAccessFileReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/lang/NullOutputStream.html" title="class in com.drew.lang"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/lang/RandomAccessFileReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="RandomAccessFileReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

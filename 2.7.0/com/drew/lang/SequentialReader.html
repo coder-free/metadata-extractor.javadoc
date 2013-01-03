@@ -1,0 +1,704 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+SequentialReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.lang.SequentialReader class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="SequentialReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SequentialReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/lang/SequentialByteArrayReader.html" title="class in com.drew.lang"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/drew/lang/StreamReader.html" title="class in com.drew.lang"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/lang/SequentialReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SequentialReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.lang</FONT>
+<BR>
+Class SequentialReader</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../resources/inherit.gif" ALT="extended by "><B>com.drew.lang.SequentialReader</B>
+</PRE>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../com/drew/lang/SequentialByteArrayReader.html" title="class in com.drew.lang">SequentialByteArrayReader</A>, <A HREF="../../../com/drew/lang/StreamReader.html" title="class in com.drew.lang">StreamReader</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>SequentialReader</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#SequentialReader()">SequentialReader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getByte()">getByte</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the next byte in the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getBytes(int)">getBytes</A></B>(int&nbsp;count)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the required number of bytes from the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;double</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getDouble64()">getDouble64</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;float</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getFloat32()">getFloat32</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;short</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getInt16()">getInt16</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a signed 16-bit int calculated from two bytes of data (MSB, LSB).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getInt32()">getInt32</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a signed 32-bit integer from four bytes of data.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getInt64()">getInt64</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a signed 64-bit integer from the buffer.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getInt8()">getInt8</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns a signed 8-bit int calculated from the next byte the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getNullTerminatedString(int)">getNullTerminatedString</A></B>(int&nbsp;maxLengthBytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Creates a String from the stream, ending where <code>byte=='\0'</code> or where <code>length==maxLength</code>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;float</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getS15Fixed16()">getS15Fixed16</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getString(int)">getString</A></B>(int&nbsp;bytesRequested)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getString(int, java.lang.String)">getString</A></B>(int&nbsp;bytesRequested,
+          java.lang.String&nbsp;charset)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getUInt16()">getUInt16</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an unsigned 16-bit int calculated from the next two bytes of the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;long</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getUInt32()">getUInt32</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Get a 32-bit unsigned integer from the buffer, returning it as a long.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;short</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#getUInt8()">getUInt8</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns an unsigned 8-bit int calculated from the next byte of the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#isMotorolaByteOrder()">isMotorolaByteOrder</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the endianness of this reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#setMotorolaByteOrder(boolean)">setMotorolaByteOrder</A></B>(boolean&nbsp;motorolaByteOrder)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets the endianness of this reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#skip(long)">skip</A></B>(long&nbsp;n)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skips forward in the sequence.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>abstract &nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../com/drew/lang/SequentialReader.html#trySkip(long)">trySkip</A></B>(long&nbsp;n)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skips forward in the sequence, returning a boolean indicating whether the skip succeeded, or whether the sequence ended.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="SequentialReader()"><!-- --></A><H3>
+SequentialReader</H3>
+<PRE>
+public <B>SequentialReader</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getByte()"><!-- --></A><H3>
+getByte</H3>
+<PRE>
+protected abstract byte <B>getByte</B>()
+                         throws java.io.IOException</PRE>
+<DL>
+<DD>Gets the next byte in the sequence.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>The read byte value
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getBytes(int)"><!-- --></A><H3>
+getBytes</H3>
+<PRE>
+public abstract byte[] <B>getBytes</B>(int&nbsp;count)
+                         throws java.io.IOException</PRE>
+<DL>
+<DD>Returns the required number of bytes from the sequence.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>count</CODE> - The number of bytes to be returned
+<DT><B>Returns:</B><DD>The requested bytes
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="skip(long)"><!-- --></A><H3>
+skip</H3>
+<PRE>
+public abstract void <B>skip</B>(long&nbsp;n)
+                   throws java.io.IOException</PRE>
+<DL>
+<DD>Skips forward in the sequence. If the sequence ends, an <CODE>EOFException</CODE> is thrown.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>n</CODE> - the number of byte to skip. Must be zero or greater.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.EOFException</CODE> - the end of the sequence is reached.
+<DD><CODE>java.io.IOException</CODE> - an error occurred reading from the underlying source.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="trySkip(long)"><!-- --></A><H3>
+trySkip</H3>
+<PRE>
+public abstract boolean <B>trySkip</B>(long&nbsp;n)
+                         throws java.io.IOException</PRE>
+<DL>
+<DD>Skips forward in the sequence, returning a boolean indicating whether the skip succeeded, or whether the sequence ended.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>n</CODE> - the number of byte to skip. Must be zero or greater.
+<DT><B>Returns:</B><DD>a boolean indicating whether the skip succeeded, or whether the sequence ended.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - an error occurred reading from the underlying source.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setMotorolaByteOrder(boolean)"><!-- --></A><H3>
+setMotorolaByteOrder</H3>
+<PRE>
+public void <B>setMotorolaByteOrder</B>(boolean&nbsp;motorolaByteOrder)</PRE>
+<DL>
+<DD>Sets the endianness of this reader.
+ <ul>
+ <li><code>true</code> for Motorola (or big) endianness (also known as network byte order), with MSB before LSB.</li>
+ <li><code>false</code> for Intel (or little) endianness, with LSB before MSB.</li>
+ </ul>
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>motorolaByteOrder</CODE> - <code>true</code> for Motorola/big endian, <code>false</code> for Intel/little endian</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isMotorolaByteOrder()"><!-- --></A><H3>
+isMotorolaByteOrder</H3>
+<PRE>
+public boolean <B>isMotorolaByteOrder</B>()</PRE>
+<DL>
+<DD>Gets the endianness of this reader.
+ <ul>
+ <li><code>true</code> for Motorola (or big) endianness (also known as network byte order), with MSB before LSB.</li>
+ <li><code>false</code> for Intel (or little) endianness, with LSB before MSB.</li>
+ </ul>
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUInt8()"><!-- --></A><H3>
+getUInt8</H3>
+<PRE>
+public short <B>getUInt8</B>()
+               throws java.io.IOException</PRE>
+<DL>
+<DD>Returns an unsigned 8-bit int calculated from the next byte of the sequence.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the 8 bit int value, between 0 and 255
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInt8()"><!-- --></A><H3>
+getInt8</H3>
+<PRE>
+public byte <B>getInt8</B>()
+             throws java.io.IOException</PRE>
+<DL>
+<DD>Returns a signed 8-bit int calculated from the next byte the sequence.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the 8 bit int value, between 0x00 and 0xFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUInt16()"><!-- --></A><H3>
+getUInt16</H3>
+<PRE>
+public int <B>getUInt16</B>()
+              throws java.io.IOException</PRE>
+<DL>
+<DD>Returns an unsigned 16-bit int calculated from the next two bytes of the sequence.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the 16 bit int value, between 0x0000 and 0xFFFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInt16()"><!-- --></A><H3>
+getInt16</H3>
+<PRE>
+public short <B>getInt16</B>()
+               throws java.io.IOException</PRE>
+<DL>
+<DD>Returns a signed 16-bit int calculated from two bytes of data (MSB, LSB).
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the 16 bit int value, between 0x0000 and 0xFFFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - the buffer does not contain enough bytes to service the request, or index is negative</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getUInt32()"><!-- --></A><H3>
+getUInt32</H3>
+<PRE>
+public long <B>getUInt32</B>()
+               throws java.io.IOException</PRE>
+<DL>
+<DD>Get a 32-bit unsigned integer from the buffer, returning it as a long.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the unsigned 32-bit int value as a long, between 0x00000000 and 0xFFFFFFFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - the buffer does not contain enough bytes to service the request, or index is negative</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInt32()"><!-- --></A><H3>
+getInt32</H3>
+<PRE>
+public int <B>getInt32</B>()
+             throws java.io.IOException</PRE>
+<DL>
+<DD>Returns a signed 32-bit integer from four bytes of data.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the signed 32 bit int value, between 0x00000000 and 0xFFFFFFFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - the buffer does not contain enough bytes to service the request, or index is negative</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getInt64()"><!-- --></A><H3>
+getInt64</H3>
+<PRE>
+public long <B>getInt64</B>()
+              throws java.io.IOException</PRE>
+<DL>
+<DD>Get a signed 64-bit integer from the buffer.
+<P>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>the 64 bit int value, between 0x0000000000000000 and 0xFFFFFFFFFFFFFFFF
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - the buffer does not contain enough bytes to service the request, or index is negative</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getS15Fixed16()"><!-- --></A><H3>
+getS15Fixed16</H3>
+<PRE>
+public float <B>getS15Fixed16</B>()
+                    throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFloat32()"><!-- --></A><H3>
+getFloat32</H3>
+<PRE>
+public float <B>getFloat32</B>()
+                 throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getDouble64()"><!-- --></A><H3>
+getDouble64</H3>
+<PRE>
+public double <B>getDouble64</B>()
+                   throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getString(int)"><!-- --></A><H3>
+getString</H3>
+<PRE>
+public java.lang.String <B>getString</B>(int&nbsp;bytesRequested)
+                           throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getString(int, java.lang.String)"><!-- --></A><H3>
+getString</H3>
+<PRE>
+public java.lang.String <B>getString</B>(int&nbsp;bytesRequested,
+                                  java.lang.String&nbsp;charset)
+                           throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNullTerminatedString(int)"><!-- --></A><H3>
+getNullTerminatedString</H3>
+<PRE>
+public java.lang.String <B>getNullTerminatedString</B>(int&nbsp;maxLengthBytes)
+                                         throws java.io.IOException</PRE>
+<DL>
+<DD>Creates a String from the stream, ending where <code>byte=='\0'</code> or where <code>length==maxLength</code>.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>maxLengthBytes</CODE> - The maximum number of bytes to read.  If a zero-byte is not reached within this limit,
+                       reading will stop and the string will be truncated to this length.
+<DT><B>Returns:</B><DD>The read string.
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - The buffer does not contain enough bytes to satisfy this request.</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/SequentialReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../com/drew/lang/SequentialByteArrayReader.html" title="class in com.drew.lang"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../com/drew/lang/StreamReader.html" title="class in com.drew.lang"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../index.html?com/drew/lang/SequentialReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="SequentialReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

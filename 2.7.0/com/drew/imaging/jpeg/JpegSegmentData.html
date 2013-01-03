@@ -1,0 +1,611 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+JpegSegmentData (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.imaging.jpeg.JpegSegmentData class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="JpegSegmentData (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JpegSegmentData.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/imaging/jpeg/JpegProcessingException.html" title="class in com.drew.imaging.jpeg"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/jpeg/JpegSegmentData.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JpegSegmentData.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.imaging.jpeg</FONT>
+<BR>
+Class JpegSegmentData</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.imaging.jpeg.JpegSegmentData</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>JpegSegmentData</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+Holds a collection of JPEG data segments.  This need not necessarily be all segments
+ within the JPEG. For example, it may be convenient to store only the non-image
+ segments when analysing metadata.
+ <p/>
+ Segments are keyed via their <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg"><CODE>JpegSegmentType</CODE></A>. Where multiple segments use the
+ same segment type, they will all be stored and available.
+ <p/>
+ Each segment type may contain multiple entries. Conceptually the model is:
+ <code>Map&lt;JpegSegmentType, Collection&lt;byte[]&gt;&gt;</code>. This class provides
+ convenience methods around that structure.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#JpegSegmentData()">JpegSegmentData</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#addSegment(byte, byte[])">addSegment</A></B>(byte&nbsp;segmentType,
+           byte[]&nbsp;segmentBytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adds segment bytes to the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#containsSegment(byte)">containsSegment</A></B>(byte&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether data is present for a given segment type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#containsSegment(com.drew.imaging.jpeg.JpegSegmentType)">containsSegment</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Determines whether data is present for a given segment type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegment(byte)">getSegment</A></B>(byte&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the first JPEG segment data for the specified type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegment(byte, int)">getSegment</A></B>(byte&nbsp;segmentType,
+           int&nbsp;occurrence)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets segment data for a specific occurrence and type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegment(com.drew.imaging.jpeg.JpegSegmentType)">getSegment</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the first JPEG segment data for the specified type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;byte[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegment(com.drew.imaging.jpeg.JpegSegmentType, int)">getSegment</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType,
+           int&nbsp;occurrence)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets segment data for a specific occurrence and type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegmentCount(byte)">getSegmentCount</A></B>(byte&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the count of segment data byte arrays stored for a given segment type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegmentCount(com.drew.imaging.jpeg.JpegSegmentType)">getSegmentCount</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the count of segment data byte arrays stored for a given segment type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Iterable&lt;byte[]&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegments(byte)">getSegments</A></B>(byte&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all instances of a given JPEG segment.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Iterable&lt;byte[]&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegments(com.drew.imaging.jpeg.JpegSegmentType)">getSegments</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns all instances of a given JPEG segment.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Iterable&lt;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#getSegmentTypes()">getSegmentTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the set of JPEG segment type identifiers.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#removeSegment(byte)">removeSegment</A></B>(byte&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes all segments from the collection having the specified type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#removeSegment(com.drew.imaging.jpeg.JpegSegmentType)">removeSegment</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes all segments from the collection having the specified type.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#removeSegmentOccurrence(byte, int)">removeSegmentOccurrence</A></B>(byte&nbsp;segmentType,
+                        int&nbsp;occurrence)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a specified instance of a segment's data from the collection.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentData.html#removeSegmentOccurrence(com.drew.imaging.jpeg.JpegSegmentType, int)">removeSegmentOccurrence</A></B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType,
+                        int&nbsp;occurrence)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Removes a specified instance of a segment's data from the collection.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="JpegSegmentData()"><!-- --></A><H3>
+JpegSegmentData</H3>
+<PRE>
+public <B>JpegSegmentData</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="addSegment(byte, byte[])"><!-- --></A><H3>
+addSegment</H3>
+<PRE>
+public void <B>addSegment</B>(byte&nbsp;segmentType,
+                       byte[]&nbsp;segmentBytes)</PRE>
+<DL>
+<DD>Adds segment bytes to the collection.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - the type of the segment being added<DD><CODE>segmentBytes</CODE> - the byte array holding data for the segment being added</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegmentTypes()"><!-- --></A><H3>
+getSegmentTypes</H3>
+<PRE>
+public java.lang.Iterable&lt;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&gt; <B>getSegmentTypes</B>()</PRE>
+<DL>
+<DD>Gets the set of JPEG segment type identifiers.
+<P>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegment(byte)"><!-- --></A><H3>
+getSegment</H3>
+<PRE>
+public byte[] <B>getSegment</B>(byte&nbsp;segmentType)</PRE>
+<DL>
+<DD>Gets the first JPEG segment data for the specified type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - the JpegSegmentType for the desired segment
+<DT><B>Returns:</B><DD>a byte[] containing segment data or null if no data exists for that segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegment(com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+getSegment</H3>
+<PRE>
+public byte[] <B>getSegment</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD>Gets the first JPEG segment data for the specified type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - the JpegSegmentType for the desired segment
+<DT><B>Returns:</B><DD>a byte[] containing segment data or null if no data exists for that segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegment(com.drew.imaging.jpeg.JpegSegmentType, int)"><!-- --></A><H3>
+getSegment</H3>
+<PRE>
+public byte[] <B>getSegment</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType,
+                         int&nbsp;occurrence)</PRE>
+<DL>
+<DD>Gets segment data for a specific occurrence and type.  Use this method when more than one occurrence
+ of segment data for a given type exists.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment<DD><CODE>occurrence</CODE> - the zero-based index of the occurrence
+<DT><B>Returns:</B><DD>the segment data as a byte[], or null if no segment exists for the type & occurrence</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegment(byte, int)"><!-- --></A><H3>
+getSegment</H3>
+<PRE>
+public byte[] <B>getSegment</B>(byte&nbsp;segmentType,
+                         int&nbsp;occurrence)</PRE>
+<DL>
+<DD>Gets segment data for a specific occurrence and type.  Use this method when more than one occurrence
+ of segment data for a given type exists.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment<DD><CODE>occurrence</CODE> - the zero-based index of the occurrence
+<DT><B>Returns:</B><DD>the segment data as a byte[], or null if no segment exists for the type & occurrence</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegments(com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+getSegments</H3>
+<PRE>
+public java.lang.Iterable&lt;byte[]&gt; <B>getSegments</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD>Returns all instances of a given JPEG segment.  If no instances exist, an empty sequence is returned.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - a number which identifies the type of JPEG segment being queried
+<DT><B>Returns:</B><DD>zero or more byte arrays, each holding the data of a JPEG segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegments(byte)"><!-- --></A><H3>
+getSegments</H3>
+<PRE>
+public java.lang.Iterable&lt;byte[]&gt; <B>getSegments</B>(byte&nbsp;segmentType)</PRE>
+<DL>
+<DD>Returns all instances of a given JPEG segment.  If no instances exist, an empty sequence is returned.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - a number which identifies the type of JPEG segment being queried
+<DT><B>Returns:</B><DD>zero or more byte arrays, each holding the data of a JPEG segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegmentCount(com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+getSegmentCount</H3>
+<PRE>
+public int <B>getSegmentCount</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD>Returns the count of segment data byte arrays stored for a given segment type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment
+<DT><B>Returns:</B><DD>the segment count (zero if no segments exist).</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getSegmentCount(byte)"><!-- --></A><H3>
+getSegmentCount</H3>
+<PRE>
+public int <B>getSegmentCount</B>(byte&nbsp;segmentType)</PRE>
+<DL>
+<DD>Returns the count of segment data byte arrays stored for a given segment type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment
+<DT><B>Returns:</B><DD>the segment count (zero if no segments exist).</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeSegmentOccurrence(com.drew.imaging.jpeg.JpegSegmentType, int)"><!-- --></A><H3>
+removeSegmentOccurrence</H3>
+<PRE>
+public void <B>removeSegmentOccurrence</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType,
+                                    int&nbsp;occurrence)</PRE>
+<DL>
+<DD>Removes a specified instance of a segment's data from the collection.  Use this method when more than one
+ occurrence of segment data exists for a given type exists.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment<DD><CODE>occurrence</CODE> - the zero-based index of the segment occurrence to remove.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeSegmentOccurrence(byte, int)"><!-- --></A><H3>
+removeSegmentOccurrence</H3>
+<PRE>
+public void <B>removeSegmentOccurrence</B>(byte&nbsp;segmentType,
+                                    int&nbsp;occurrence)</PRE>
+<DL>
+<DD>Removes a specified instance of a segment's data from the collection.  Use this method when more than one
+ occurrence of segment data exists for a given type exists.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment<DD><CODE>occurrence</CODE> - the zero-based index of the segment occurrence to remove.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeSegment(com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+removeSegment</H3>
+<PRE>
+public void <B>removeSegment</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD>Removes all segments from the collection having the specified type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="removeSegment(byte)"><!-- --></A><H3>
+removeSegment</H3>
+<PRE>
+public void <B>removeSegment</B>(byte&nbsp;segmentType)</PRE>
+<DL>
+<DD>Removes all segments from the collection having the specified type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="containsSegment(com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+containsSegment</H3>
+<PRE>
+public boolean <B>containsSegment</B>(<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD>Determines whether data is present for a given segment type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment
+<DT><B>Returns:</B><DD>true if data exists, otherwise false</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="containsSegment(byte)"><!-- --></A><H3>
+containsSegment</H3>
+<PRE>
+public boolean <B>containsSegment</B>(byte&nbsp;segmentType)</PRE>
+<DL>
+<DD>Determines whether data is present for a given segment type.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentType</CODE> - identifies the required segment
+<DT><B>Returns:</B><DD>true if data exists, otherwise false</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/JpegSegmentData.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/imaging/jpeg/JpegProcessingException.html" title="class in com.drew.imaging.jpeg"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/jpeg/JpegSegmentData.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="JpegSegmentData.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

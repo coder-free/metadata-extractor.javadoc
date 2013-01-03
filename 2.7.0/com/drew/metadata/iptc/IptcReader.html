@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+IptcReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.metadata.iptc.IptcReader class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="IptcReader (Metadata-Extractor - Javadoc - An Open Source Java Library for Image File Metadata)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IptcReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/metadata/iptc/IptcDirectory.html" title="class in com.drew.metadata.iptc"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/metadata/iptc/IptcReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IptcReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.metadata.iptc</FONT>
+<BR>
+Class IptcReader</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.metadata.iptc.IptcReader</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg">JpegSegmentMetadataReader</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public class <B>IptcReader</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg">JpegSegmentMetadataReader</A></DL>
+</PRE>
+
+<P>
+Decodes IPTC binary data, populating a <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A> object with tag values in an <A HREF="../../../../com/drew/metadata/iptc/IptcDirectory.html" title="class in com.drew.metadata.iptc"><CODE>IptcDirectory</CODE></A>.
+ <p/>
+ http://www.iptc.org/std/IIM/4.1/specification/IIMV4.1.pdf
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/iptc/IptcReader.html#IptcReader()">IptcReader</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/iptc/IptcReader.html#canProcess(byte[], com.drew.imaging.jpeg.JpegSegmentType)">canProcess</A></B>(byte[]&nbsp;segmentBytes,
+           <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets a value indicating whether the supplied byte data can be processed by this reader.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/iptc/IptcReader.html#extract(byte[], com.drew.metadata.Metadata, com.drew.imaging.jpeg.JpegSegmentType)">extract</A></B>(byte[]&nbsp;segmentBytes,
+        <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+        <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extracts metadata from a JPEG segment's byte array and merges it into the specified <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A> object.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/iptc/IptcReader.html#extract(com.drew.lang.SequentialReader, com.drew.metadata.Metadata, long)">extract</A></B>(<A HREF="../../../../com/drew/lang/SequentialReader.html" title="class in com.drew.lang">SequentialReader</A>&nbsp;reader,
+        <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+        long&nbsp;length)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs the IPTC data extraction, adding found values to the specified instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.Iterable&lt;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/iptc/IptcReader.html#getSegmentTypes()">getSegmentTypes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the set of JPEG segment types that this reader is interested in.</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="IptcReader()"><!-- --></A><H3>
+IptcReader</H3>
+<PRE>
+public <B>IptcReader</B>()</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="getSegmentTypes()"><!-- --></A><H3>
+getSegmentTypes</H3>
+<PRE>
+public java.lang.Iterable&lt;<A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&gt; <B>getSegmentTypes</B>()</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#getSegmentTypes()">JpegSegmentMetadataReader</A></CODE></B></DD>
+<DD>Gets the set of JPEG segment types that this reader is interested in.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#getSegmentTypes()">getSegmentTypes</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg">JpegSegmentMetadataReader</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="canProcess(byte[], com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+canProcess</H3>
+<PRE>
+public boolean <B>canProcess</B>(byte[]&nbsp;segmentBytes,
+                          <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#canProcess(byte[], com.drew.imaging.jpeg.JpegSegmentType)">JpegSegmentMetadataReader</A></CODE></B></DD>
+<DD>Gets a value indicating whether the supplied byte data can be processed by this reader. This is not a guarantee
+ that no errors will occur, but rather a best-effort indication of whether the parse is likely to succeed.
+ Implementations are expected to check things such as the opening bytes, data length, etc.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#canProcess(byte[], com.drew.imaging.jpeg.JpegSegmentType)">canProcess</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg">JpegSegmentMetadataReader</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="extract(byte[], com.drew.metadata.Metadata, com.drew.imaging.jpeg.JpegSegmentType)"><!-- --></A><H3>
+extract</H3>
+<PRE>
+public void <B>extract</B>(byte[]&nbsp;segmentBytes,
+                    <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+                    <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg">JpegSegmentType</A>&nbsp;segmentType)</PRE>
+<DL>
+<DD><B>Description copied from interface: <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#extract(byte[], com.drew.metadata.Metadata, com.drew.imaging.jpeg.JpegSegmentType)">JpegSegmentMetadataReader</A></CODE></B></DD>
+<DD>Extracts metadata from a JPEG segment's byte array and merges it into the specified <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A> object.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html#extract(byte[], com.drew.metadata.Metadata, com.drew.imaging.jpeg.JpegSegmentType)">extract</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentMetadataReader.html" title="interface in com.drew.imaging.jpeg">JpegSegmentMetadataReader</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>segmentBytes</CODE> - The byte array from which the metadata should be extracted.<DD><CODE>metadata</CODE> - The <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A> object into which extracted values should be merged.<DD><CODE>segmentType</CODE> - The <A HREF="../../../../com/drew/imaging/jpeg/JpegSegmentType.html" title="enum in com.drew.imaging.jpeg"><CODE>JpegSegmentType</CODE></A> being read.</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="extract(com.drew.lang.SequentialReader, com.drew.metadata.Metadata, long)"><!-- --></A><H3>
+extract</H3>
+<PRE>
+public void <B>extract</B>(<A HREF="../../../../com/drew/lang/SequentialReader.html" title="class in com.drew.lang">SequentialReader</A>&nbsp;reader,
+                    <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+                    long&nbsp;length)</PRE>
+<DL>
+<DD>Performs the IPTC data extraction, adding found values to the specified instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/IptcReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;<A HREF="../../../../com/drew/metadata/iptc/IptcDirectory.html" title="class in com.drew.metadata.iptc"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/metadata/iptc/IptcReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IptcReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

@@ -213,6 +213,14 @@ Describes tags specific to Canon cameras.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#TAG_BLACK_LEVEL">TAG_BLACK_LEVEL</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#TAG_CAMERA_INFO_ARRAY">TAG_CAMERA_INFO_ARRAY</A></B></CODE>
 
 <BR>
@@ -342,6 +350,14 @@ Describes tags specific to Canon cameras.
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>static&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#TAG_CROP_INFO">TAG_CROP_INFO</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#TAG_CRW_PARAM">TAG_CRW_PARAM</A></B></CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -712,11 +728,11 @@ Describes tags specific to Canon cameras.
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#setIntArray(int, int[])">setIntArray</A></B>(int&nbsp;tagType,
-            int[]&nbsp;ints)</CODE>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/CanonMakernoteDirectory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A></B>(int&nbsp;tagType,
+               java.lang.Object&nbsp;array)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets an <code>int[]</code> (array) for the specified tag.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets an array <code>Object</code> for the specified tag.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.drew.metadata.Directory"><!-- --></A>
@@ -725,7 +741,7 @@ Describes tags specific to Canon cameras.
 <TH ALIGN="left"><B>Methods inherited from class com.drew.metadata.<A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#addError(java.lang.String)">addError</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#containsTag(int)">containsTag</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBoolean(int)">getBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBooleanObject(int)">getBooleanObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getByteArray(int)">getByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int, java.util.TimeZone)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDescription(int)">getDescription</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDouble(int)">getDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDoubleObject(int)">getDoubleObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrorCount()">getErrorCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrors()">getErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloat(int)">getFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloatObject(int)">getFloatObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInt(int)">getInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getIntArray(int)">getIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInteger(int)">getInteger</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLong(int)">getLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLongObject(int)">getLongObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getObject(int)">getObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRational(int)">getRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRationalArray(int)">getRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int, java.lang.String)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getStringArray(int)">getStringArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagCount()">getTagCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagName(int)">getTagName</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTags()">getTags</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#hasErrors()">hasErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setBoolean(int, boolean)">setBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">setByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDate(int, java.util.Date)">setDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDescriptor(com.drew.metadata.TagDescriptor)">setDescriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDouble(int, double)">setDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDoubleArray(int, double[])">setDoubleArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloat(int, float)">setFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloatArray(int, float[])">setFloatArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setInt(int, int)">setInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setLong(int, long)">setLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObject(int, java.lang.Object)">setObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRational(int, com.drew.lang.Rational)">setRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setString(int, java.lang.String)">setString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setStringArray(int, java.lang.String[])">setStringArray</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#addError(java.lang.String)">addError</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#containsTag(int)">containsTag</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBoolean(int)">getBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBooleanObject(int)">getBooleanObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getByteArray(int)">getByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int, java.util.TimeZone)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDescription(int)">getDescription</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDouble(int)">getDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDoubleObject(int)">getDoubleObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrorCount()">getErrorCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrors()">getErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloat(int)">getFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloatObject(int)">getFloatObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInt(int)">getInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getIntArray(int)">getIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInteger(int)">getInteger</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLong(int)">getLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLongObject(int)">getLongObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getObject(int)">getObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRational(int)">getRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRationalArray(int)">getRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int, java.lang.String)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getStringArray(int)">getStringArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagCount()">getTagCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagName(int)">getTagName</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTags()">getTags</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#hasErrors()">hasErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setBoolean(int, boolean)">setBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">setByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDate(int, java.util.Date)">setDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDescriptor(com.drew.metadata.TagDescriptor)">setDescriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDouble(int, double)">setDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDoubleArray(int, double[])">setDoubleArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloat(int, float)">setFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloatArray(int, float[])">setFloatArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setInt(int, int)">setInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">setIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setLong(int, long)">setLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObject(int, java.lang.Object)">setObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRational(int, com.drew.lang.Rational)">setRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setString(int, java.lang.String)">setString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setStringArray(int, java.lang.String[])">setStringArray</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -1260,6 +1276,16 @@ public static final int <B>TAG_COLOR_DATA_ARRAY_2</B></PRE>
 </DL>
 <HR>
 
+<A NAME="TAG_CRW_PARAM"><!-- --></A><H3>
+TAG_CRW_PARAM</H3>
+<PRE>
+public static final int <B>TAG_CRW_PARAM</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.CanonMakernoteDirectory.TAG_CRW_PARAM">Constant Field Values</A></DL>
+</DL>
+<HR>
+
 <A NAME="TAG_COLOR_INFO_ARRAY_2"><!-- --></A><H3>
 TAG_COLOR_INFO_ARRAY_2</H3>
 <PRE>
@@ -1267,6 +1293,16 @@ public static final int <B>TAG_COLOR_INFO_ARRAY_2</B></PRE>
 <DL>
 <DL>
 <DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.CanonMakernoteDirectory.TAG_COLOR_INFO_ARRAY_2">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="TAG_BLACK_LEVEL"><!-- --></A><H3>
+TAG_BLACK_LEVEL</H3>
+<PRE>
+public static final int <B>TAG_BLACK_LEVEL</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../../constant-values.html#com.drew.metadata.exif.makernotes.CanonMakernoteDirectory.TAG_BLACK_LEVEL">Constant Field Values</A></DL>
 </DL>
 <HR>
 
@@ -1422,20 +1458,20 @@ protected java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt; <B>getTagN
 </DL>
 <HR>
 
-<A NAME="setIntArray(int, int[])"><!-- --></A><H3>
-setIntArray</H3>
+<A NAME="setObjectArray(int, java.lang.Object)"><!-- --></A><H3>
+setObjectArray</H3>
 <PRE>
-public void <B>setIntArray</B>(int&nbsp;tagType,
-                        int[]&nbsp;ints)</PRE>
+public void <B>setObjectArray</B>(int&nbsp;tagType,
+                           java.lang.Object&nbsp;array)</PRE>
 <DL>
-<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">Directory</A></CODE></B></DD>
-<DD>Sets an <code>int[]</code> (array) for the specified tag.
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">Directory</A></CODE></B></DD>
+<DD>Sets an array <code>Object</code> for the specified tag.
 <P>
 <DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">setIntArray</A></CODE> in class <CODE><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A></CODE> in class <CODE><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></DL>
 </DD>
 <DD><DL>
-<DT><B>Parameters:</B><DD><CODE>tagType</CODE> - the tag identifier<DD><CODE>ints</CODE> - the int array to store</DL>
+<DT><B>Parameters:</B><DD><CODE>tagType</CODE> - the tag's value as an int<DD><CODE>array</CODE> - the array of values for the specified tag</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->

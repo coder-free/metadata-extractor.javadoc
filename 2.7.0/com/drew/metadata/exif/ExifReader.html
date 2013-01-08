@@ -72,9 +72,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -112,24 +112,7 @@ Decodes Exif binary data, populating a <A HREF="../../../../com/drew/metadata/Me
 <HR>
 
 <P>
-<!-- =========== FIELD SUMMARY =========== -->
 
-<A NAME="field_summary"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Field Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#TIFF_HEADER_START_OFFSET">TIFF_HEADER_START_OFFSET</A></B></CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 
 <A NAME="constructor_summary"><!-- --></A>
@@ -176,22 +159,11 @@ Decodes Exif binary data, populating a <A HREF="../../../../com/drew/metadata/Me
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#extract(com.drew.lang.RandomAccessReader, com.drew.metadata.Metadata)">extract</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-        <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs the Exif data extraction, adding found values to the specified
- instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#extractTiff(com.drew.lang.RandomAccessReader, com.drew.metadata.Metadata)">extractTiff</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
             <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs the Exif data extraction on a TIFF/RAW, adding found values to the specified
- instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -200,6 +172,22 @@ Decodes Exif binary data, populating a <A HREF="../../../../com/drew/metadata/Me
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gets the set of JPEG segment types that this reader is interested in.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#isStoreThumbnailBytes()">isStoreThumbnailBytes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#setStoreThumbnailBytes(boolean)">setStoreThumbnailBytes</A></B>(boolean&nbsp;storeThumbnailBytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -213,25 +201,6 @@ Decodes Exif binary data, populating a <A HREF="../../../../com/drew/metadata/Me
 </TABLE>
 &nbsp;
 <P>
-
-<!-- ============ FIELD DETAIL =========== -->
-
-<A NAME="field_detail"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-<B>Field Detail</B></FONT></TH>
-</TR>
-</TABLE>
-
-<A NAME="TIFF_HEADER_START_OFFSET"><!-- --></A><H3>
-TIFF_HEADER_START_OFFSET</H3>
-<PRE>
-public static final int <B>TIFF_HEADER_START_OFFSET</B></PRE>
-<DL>
-<DL>
-<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.metadata.exif.ExifReader.TIFF_HEADER_START_OFFSET">Constant Field Values</A></DL>
-</DL>
 
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 
@@ -259,6 +228,34 @@ public <B>ExifReader</B>()</PRE>
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="isStoreThumbnailBytes()"><!-- --></A><H3>
+isStoreThumbnailBytes</H3>
+<PRE>
+public boolean <B>isStoreThumbnailBytes</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setStoreThumbnailBytes(boolean)"><!-- --></A><H3>
+setStoreThumbnailBytes</H3>
+<PRE>
+public void <B>setStoreThumbnailBytes</B>(boolean&nbsp;storeThumbnailBytes)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="getSegmentTypes()"><!-- --></A><H3>
 getSegmentTypes</H3>
@@ -316,30 +313,15 @@ public void <B>extract</B>(byte[]&nbsp;segmentBytes,
 </DL>
 <HR>
 
-<A NAME="extract(com.drew.lang.RandomAccessReader, com.drew.metadata.Metadata)"><!-- --></A><H3>
-extract</H3>
-<PRE>
-public void <B>extract</B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                    <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</PRE>
-<DL>
-<DD>Performs the Exif data extraction, adding found values to the specified
- instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.
-<P>
-<DD><DL>
-</DL>
-</DD>
-<DD><DL>
-<DT><B>Parameters:</B><DD><CODE>reader</CODE> - The buffer reader from which Exif data should be read.<DD><CODE>metadata</CODE> - The Metadata object into which extracted values should be merged.</DL>
-</DD>
-</DL>
-<HR>
-
 <A NAME="extractTiff(com.drew.lang.RandomAccessReader, com.drew.metadata.Metadata)"><!-- --></A><H3>
 extractTiff</H3>
 <PRE>
-public void <B>extractTiff</B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                        <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</PRE>
+<FONT SIZE="-1">@Deprecated
+</FONT>public void <B>extractTiff</B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+                                   <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</PRE>
 <DL>
+<DD><B>Deprecated.</B>&nbsp;
+<P>
 <DD>Performs the Exif data extraction on a TIFF/RAW, adding found values to the specified
  instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.
 <P>
@@ -402,9 +384,9 @@ public void <B>extractTiff</B>(<A HREF="../../../../com/drew/lang/RandomAccessRe
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>

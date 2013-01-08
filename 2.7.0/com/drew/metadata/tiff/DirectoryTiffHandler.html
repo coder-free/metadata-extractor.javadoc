@@ -1,0 +1,883 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+DirectoryTiffHandler (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.metadata.tiff.DirectoryTiffHandler class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="DirectoryTiffHandler (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DirectoryTiffHandler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/metadata/tiff/DirectoryTiffHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DirectoryTiffHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.metadata.tiff</FONT>
+<BR>
+Class DirectoryTiffHandler</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.metadata.tiff.DirectoryTiffHandler</B>
+</PRE>
+<DL>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></DD>
+</DL>
+<DL>
+<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../com/drew/metadata/exif/ExifTiffHandler.html" title="class in com.drew.metadata.exif">ExifTiffHandler</A></DD>
+</DL>
+<HR>
+<DL>
+<DT><PRE>public abstract class <B>DirectoryTiffHandler</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></DL>
+</PRE>
+
+<P>
+Adapter between the <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><CODE>TiffHandler</CODE></A> interface and the <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>/<A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata"><CODE>Directory</CODE></A> object model.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#_currentDirectory">_currentDirectory</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;<A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#_metadata">_metadata</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+
+<A NAME="constructor_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Constructor Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected </CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#DirectoryTiffHandler(com.drew.metadata.Metadata, java.lang.Class)">DirectoryTiffHandler</A></B>(<A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+                     java.lang.Class&lt;? extends <A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;&nbsp;initialDirectory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#endingIFD()">endingIFD</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#error(java.lang.String)">error</A></B>(java.lang.String&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#pushDirectory(java.lang.Class)">pushDirectory</A></B>(java.lang.Class&lt;? extends <A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;&nbsp;directoryClass)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setByteArray(int, byte[])">setByteArray</A></B>(int&nbsp;tagId,
+             byte[]&nbsp;bytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setDouble(int, double)">setDouble</A></B>(int&nbsp;tagId,
+          double&nbsp;double64)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setDoubleArray(int, double[])">setDoubleArray</A></B>(int&nbsp;tagId,
+               double[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setFloat(int, float)">setFloat</A></B>(int&nbsp;tagId,
+         float&nbsp;float32)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setFloatArray(int, float[])">setFloatArray</A></B>(int&nbsp;tagId,
+              float[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt16s(int, int)">setInt16s</A></B>(int&nbsp;tagId,
+          int&nbsp;int16s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt16sArray(int, short[])">setInt16sArray</A></B>(int&nbsp;tagId,
+               short[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt16u(int, int)">setInt16u</A></B>(int&nbsp;tagId,
+          int&nbsp;int16u)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt16uArray(int, int[])">setInt16uArray</A></B>(int&nbsp;tagId,
+               int[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt32s(int, int)">setInt32s</A></B>(int&nbsp;tagId,
+          int&nbsp;int32s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt32sArray(int, int[])">setInt32sArray</A></B>(int&nbsp;tagId,
+               int[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt32u(int, long)">setInt32u</A></B>(int&nbsp;tagId,
+          long&nbsp;int32u)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt32uArray(int, long[])">setInt32uArray</A></B>(int&nbsp;tagId,
+               long[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt8s(int, byte)">setInt8s</A></B>(int&nbsp;tagId,
+         byte&nbsp;int8s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt8sArray(int, byte[])">setInt8sArray</A></B>(int&nbsp;tagId,
+              byte[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt8u(int, short)">setInt8u</A></B>(int&nbsp;tagId,
+         short&nbsp;int8u)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setInt8uArray(int, short[])">setInt8uArray</A></B>(int&nbsp;tagId,
+              short[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setRational(int, com.drew.lang.Rational)">setRational</A></B>(int&nbsp;tagId,
+            <A HREF="../../../../com/drew/lang/Rational.html" title="class in com.drew.lang">Rational</A>&nbsp;rational)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A></B>(int&nbsp;tagId,
+                 <A HREF="../../../../com/drew/lang/Rational.html" title="class in com.drew.lang">Rational</A>[]&nbsp;array)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#setString(int, java.lang.String)">setString</A></B>(int&nbsp;tagId,
+          java.lang.String&nbsp;string)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/metadata/tiff/DirectoryTiffHandler.html#warn(java.lang.String)">warn</A></B>(java.lang.String&nbsp;message)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_com.drew.imaging.tiff.TiffHandler"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from interface com.drew.imaging.tiff.<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#completed(com.drew.lang.RandomAccessReader, int)">completed</A>, <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A>, <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#hasFollowerIfd()">hasFollowerIfd</A>, <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#isTagIfdPointer(int)">isTagIfdPointer</A>, <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setTiffMarker(int)">setTiffMarker</A></CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="_currentDirectory"><!-- --></A><H3>
+_currentDirectory</H3>
+<PRE>
+protected <A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A> <B>_currentDirectory</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="_metadata"><!-- --></A><H3>
+_metadata</H3>
+<PRE>
+protected <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A> <B>_metadata</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+
+<A NAME="constructor_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Constructor Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="DirectoryTiffHandler(com.drew.metadata.Metadata, java.lang.Class)"><!-- --></A><H3>
+DirectoryTiffHandler</H3>
+<PRE>
+protected <B>DirectoryTiffHandler</B>(<A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata,
+                               java.lang.Class&lt;? extends <A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;&nbsp;initialDirectory)</PRE>
+<DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="endingIFD()"><!-- --></A><H3>
+endingIFD</H3>
+<PRE>
+public void <B>endingIFD</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#endingIFD()">endingIFD</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="pushDirectory(java.lang.Class)"><!-- --></A><H3>
+pushDirectory</H3>
+<PRE>
+protected void <B>pushDirectory</B>(java.lang.Class&lt;? extends <A HREF="../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A>&gt;&nbsp;directoryClass)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="warn(java.lang.String)"><!-- --></A><H3>
+warn</H3>
+<PRE>
+public void <B>warn</B>(java.lang.String&nbsp;message)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#warn(java.lang.String)">warn</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="error(java.lang.String)"><!-- --></A><H3>
+error</H3>
+<PRE>
+public void <B>error</B>(java.lang.String&nbsp;message)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#error(java.lang.String)">error</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setByteArray(int, byte[])"><!-- --></A><H3>
+setByteArray</H3>
+<PRE>
+public void <B>setByteArray</B>(int&nbsp;tagId,
+                         byte[]&nbsp;bytes)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setByteArray(int, byte[])">setByteArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setString(int, java.lang.String)"><!-- --></A><H3>
+setString</H3>
+<PRE>
+public void <B>setString</B>(int&nbsp;tagId,
+                      java.lang.String&nbsp;string)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setString(int, java.lang.String)">setString</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRational(int, com.drew.lang.Rational)"><!-- --></A><H3>
+setRational</H3>
+<PRE>
+public void <B>setRational</B>(int&nbsp;tagId,
+                        <A HREF="../../../../com/drew/lang/Rational.html" title="class in com.drew.lang">Rational</A>&nbsp;rational)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setRational(int, com.drew.lang.Rational)">setRational</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setRationalArray(int, com.drew.lang.Rational[])"><!-- --></A><H3>
+setRationalArray</H3>
+<PRE>
+public void <B>setRationalArray</B>(int&nbsp;tagId,
+                             <A HREF="../../../../com/drew/lang/Rational.html" title="class in com.drew.lang">Rational</A>[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFloat(int, float)"><!-- --></A><H3>
+setFloat</H3>
+<PRE>
+public void <B>setFloat</B>(int&nbsp;tagId,
+                     float&nbsp;float32)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setFloat(int, float)">setFloat</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setFloatArray(int, float[])"><!-- --></A><H3>
+setFloatArray</H3>
+<PRE>
+public void <B>setFloatArray</B>(int&nbsp;tagId,
+                          float[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setFloatArray(int, float[])">setFloatArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDouble(int, double)"><!-- --></A><H3>
+setDouble</H3>
+<PRE>
+public void <B>setDouble</B>(int&nbsp;tagId,
+                      double&nbsp;double64)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setDouble(int, double)">setDouble</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setDoubleArray(int, double[])"><!-- --></A><H3>
+setDoubleArray</H3>
+<PRE>
+public void <B>setDoubleArray</B>(int&nbsp;tagId,
+                           double[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setDoubleArray(int, double[])">setDoubleArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt8s(int, byte)"><!-- --></A><H3>
+setInt8s</H3>
+<PRE>
+public void <B>setInt8s</B>(int&nbsp;tagId,
+                     byte&nbsp;int8s)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt8s(int, byte)">setInt8s</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt8sArray(int, byte[])"><!-- --></A><H3>
+setInt8sArray</H3>
+<PRE>
+public void <B>setInt8sArray</B>(int&nbsp;tagId,
+                          byte[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt8sArray(int, byte[])">setInt8sArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt8u(int, short)"><!-- --></A><H3>
+setInt8u</H3>
+<PRE>
+public void <B>setInt8u</B>(int&nbsp;tagId,
+                     short&nbsp;int8u)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt8u(int, short)">setInt8u</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt8uArray(int, short[])"><!-- --></A><H3>
+setInt8uArray</H3>
+<PRE>
+public void <B>setInt8uArray</B>(int&nbsp;tagId,
+                          short[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt8uArray(int, short[])">setInt8uArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt16s(int, int)"><!-- --></A><H3>
+setInt16s</H3>
+<PRE>
+public void <B>setInt16s</B>(int&nbsp;tagId,
+                      int&nbsp;int16s)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt16s(int, int)">setInt16s</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt16sArray(int, short[])"><!-- --></A><H3>
+setInt16sArray</H3>
+<PRE>
+public void <B>setInt16sArray</B>(int&nbsp;tagId,
+                           short[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt16sArray(int, short[])">setInt16sArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt16u(int, int)"><!-- --></A><H3>
+setInt16u</H3>
+<PRE>
+public void <B>setInt16u</B>(int&nbsp;tagId,
+                      int&nbsp;int16u)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt16u(int, int)">setInt16u</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt16uArray(int, int[])"><!-- --></A><H3>
+setInt16uArray</H3>
+<PRE>
+public void <B>setInt16uArray</B>(int&nbsp;tagId,
+                           int[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt16uArray(int, int[])">setInt16uArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt32s(int, int)"><!-- --></A><H3>
+setInt32s</H3>
+<PRE>
+public void <B>setInt32s</B>(int&nbsp;tagId,
+                      int&nbsp;int32s)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt32s(int, int)">setInt32s</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt32sArray(int, int[])"><!-- --></A><H3>
+setInt32sArray</H3>
+<PRE>
+public void <B>setInt32sArray</B>(int&nbsp;tagId,
+                           int[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt32sArray(int, int[])">setInt32sArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt32u(int, long)"><!-- --></A><H3>
+setInt32u</H3>
+<PRE>
+public void <B>setInt32u</B>(int&nbsp;tagId,
+                      long&nbsp;int32u)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt32u(int, long)">setInt32u</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setInt32uArray(int, long[])"><!-- --></A><H3>
+setInt32uArray</H3>
+<PRE>
+public void <B>setInt32uArray</B>(int&nbsp;tagId,
+                           long[]&nbsp;array)</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#setInt32uArray(int, long[])">setInt32uArray</A></CODE> in interface <CODE><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/DirectoryTiffHandler.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/metadata/tiff/DirectoryTiffHandler.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="DirectoryTiffHandler.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

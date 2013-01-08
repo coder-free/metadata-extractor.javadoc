@@ -85,6 +85,10 @@ function windowTitle()
 Packages that use <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><A HREF="#com.drew.imaging.tiff"><B>com.drew.imaging.tiff</B></A></TD>
+<TD>Contains classes for working with TIFF format files.&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><A HREF="#com.drew.lang"><B>com.drew.lang</B></A></TD>
 <TD>Contains classes of generic utility.&nbsp;</TD>
 </TR>
@@ -107,6 +111,66 @@ Packages that use <A HREF="../../../../com/drew/lang/RandomAccessReader.html" ti
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><A HREF="#com.drew.metadata.photoshop"><B>com.drew.metadata.photoshop</B></A></TD>
 <TD>Contains classes for the extraction and modelling of Photoshop metadata.&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+<A NAME="com.drew.imaging.tiff"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+Uses of <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A> in <A HREF="../../../../com/drew/imaging/tiff/package-summary.html">com.drew.imaging.tiff</A></FONT></TH>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left" COLSPAN="2">Methods in <A HREF="../../../../com/drew/imaging/tiff/package-summary.html">com.drew.imaging.tiff</A> with parameters of type <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#completed(com.drew.lang.RandomAccessReader, int)">completed</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+          int&nbsp;tiffHeaderOffset)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+                 java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
+                 int&nbsp;tiffHeaderOffset,
+                 <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+                 int&nbsp;tagId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>TiffReader.</B><B><A HREF="../../../../com/drew/imaging/tiff/TiffReader.html#processIfd(com.drew.imaging.tiff.TiffHandler, com.drew.lang.RandomAccessReader, java.util.Set, int, int)">processIfd</A></B>(<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+           <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+           java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
+           int&nbsp;ifdOffset,
+           int&nbsp;tiffHeaderOffset)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes a TIFF IFD.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B>TiffReader.</B><B><A HREF="../../../../com/drew/imaging/tiff/TiffReader.html#processTiff(com.drew.lang.RandomAccessReader, com.drew.imaging.tiff.TiffHandler, int)">processTiff</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+            <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+            int&nbsp;tiffHeaderOffset)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes a TIFF data sequence.</TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -197,12 +261,23 @@ Uses of <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B>ExifReader.</B><B><A HREF="../../../../com/drew/metadata/exif/ExifReader.html#extract(com.drew.lang.RandomAccessReader, com.drew.metadata.Metadata)">extract</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-        <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</CODE>
+<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../com/drew/metadata/exif/ExifTiffHandler.html#completed(com.drew.lang.RandomAccessReader, int)">completed</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+          int&nbsp;tiffHeaderOffset)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs the Exif data extraction, adding found values to the specified
- instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../com/drew/metadata/exif/ExifTiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+                 java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
+                 int&nbsp;tiffHeaderOffset,
+                 <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+                 int&nbsp;tagId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -211,8 +286,7 @@ Uses of <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class
             <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A>&nbsp;metadata)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Performs the Exif data extraction on a TIFF/RAW, adding found values to the specified
- instance of <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata"><CODE>Metadata</CODE></A>.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<B>Deprecated.</B>&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;

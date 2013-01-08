@@ -3,17 +3,17 @@
 <HTML>
 <HEAD>
 <TITLE>
-TiffMetadataReader (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)
+TiffReader (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)
 </TITLE>
 
-<META NAME="keywords" CONTENT="com.drew.imaging.tiff.TiffMetadataReader class">
+<META NAME="keywords" CONTENT="com.drew.imaging.tiff.TiffReader class">
 
 <LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
 
 <SCRIPT type="text/javascript">
 function windowTitle()
 {
-    parent.document.title="TiffMetadataReader (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)";
+    parent.document.title="TiffReader (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)";
 }
 </SCRIPT>
 <NOSCRIPT>
@@ -36,7 +36,7 @@ function windowTitle()
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffMetadataReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -51,11 +51,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffMetadataReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="TiffMetadataReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TiffReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -86,25 +86,24 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <FONT SIZE="-1">
 com.drew.imaging.tiff</FONT>
 <BR>
-Class TiffMetadataReader</H2>
+Class TiffReader</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.imaging.tiff.TiffMetadataReader</B>
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.imaging.tiff.TiffReader</B>
 </PRE>
 <HR>
 <DL>
-<DT><PRE>public class <B>TiffMetadataReader</B><DT>extends java.lang.Object</DL>
+<DT><PRE>public class <B>TiffReader</B><DT>extends java.lang.Object</DL>
 </PRE>
 
 <P>
-Obtains all available metadata from TIFF formatted files.  Note that TIFF files include many digital camera RAW
- formats, including Canon (CRW, CR2), Nikon (NEF), Olympus (ORF) and Panasonic (RW2).
+Processes TIFF-formatted data, calling into client code via that <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><CODE>TiffHandler</CODE></A> interface.
 <P>
 
 <P>
 <DL>
 <DT><B>Author:</B></DT>
-  <DD>Darren Salomons, Drew Noakes http://drewnoakes.com</DD>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
 </DL>
 <HR>
 
@@ -119,7 +118,7 @@ Obtains all available metadata from TIFF formatted files.  Note that TIFF files 
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffMetadataReader.html#TiffMetadataReader()">TiffMetadataReader</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffReader.html#TiffReader()">TiffReader</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -136,19 +135,25 @@ Obtains all available metadata from TIFF formatted files.  Note that TIFF files 
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;<A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffMetadataReader.html#readMetadata(java.io.File)">readMetadata</A></B>(java.io.File&nbsp;file)</CODE>
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffReader.html#processIfd(com.drew.imaging.tiff.TiffHandler, com.drew.lang.RandomAccessReader, java.util.Set, int, int)">processIfd</A></B>(<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+           <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+           java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
+           int&nbsp;ifdOffset,
+           int&nbsp;tiffHeaderOffset)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes a TIFF IFD.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>static&nbsp;<A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffMetadataReader.html#readMetadata(java.io.InputStream)">readMetadata</A></B>(java.io.InputStream&nbsp;inputStream)</CODE>
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffReader.html#processTiff(com.drew.lang.RandomAccessReader, com.drew.imaging.tiff.TiffHandler, int)">processTiff</A></B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+            <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+            int&nbsp;tiffHeaderOffset)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Processes a TIFF data sequence.</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -173,10 +178,10 @@ Obtains all available metadata from TIFF formatted files.  Note that TIFF files 
 </TR>
 </TABLE>
 
-<A NAME="TiffMetadataReader()"><!-- --></A><H3>
-TiffMetadataReader</H3>
+<A NAME="TiffReader()"><!-- --></A><H3>
+TiffReader</H3>
 <PRE>
-public <B>TiffMetadataReader</B>()</PRE>
+public <B>TiffReader</B>()</PRE>
 <DL>
 </DL>
 
@@ -190,27 +195,55 @@ public <B>TiffMetadataReader</B>()</PRE>
 </TR>
 </TABLE>
 
-<A NAME="readMetadata(java.io.File)"><!-- --></A><H3>
-readMetadata</H3>
+<A NAME="processTiff(com.drew.lang.RandomAccessReader, com.drew.imaging.tiff.TiffHandler, int)"><!-- --></A><H3>
+processTiff</H3>
 <PRE>
-public static <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A> <B>readMetadata</B>(java.io.File&nbsp;file)
-                             throws java.io.IOException</PRE>
+public void <B>processTiff</B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+                        <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+                        int&nbsp;tiffHeaderOffset)
+                 throws <A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff">TiffProcessingException</A>,
+                        java.io.IOException</PRE>
 <DL>
+<DD>Processes a TIFF data sequence.
+<P>
 <DD><DL>
-
+<DT><B>Parameters:</B><DD><CODE>reader</CODE> - the <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang"><CODE>RandomAccessReader</CODE></A> from which the data should be read<DD><CODE>handler</CODE> - the <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><CODE>TiffHandler</CODE></A> that will coordinate processing and accept read values<DD><CODE>tiffHeaderOffset</CODE> - the offset within <code>reader</code> at which the TIFF header starts
 <DT><B>Throws:</B>
-<DD><CODE>java.io.IOException</CODE></DL>
+<DD><CODE><A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff">TiffProcessingException</A></CODE> - if an error occurred during the processing of TIFF data that could not be
+                                 ignored or recovered from
+<DD><CODE>java.io.IOException</CODE> - an error occurred while accessing the required data</DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="readMetadata(java.io.InputStream)"><!-- --></A><H3>
-readMetadata</H3>
+<A NAME="processIfd(com.drew.imaging.tiff.TiffHandler, com.drew.lang.RandomAccessReader, java.util.Set, int, int)"><!-- --></A><H3>
+processIfd</H3>
 <PRE>
-public static <A HREF="../../../../com/drew/metadata/Metadata.html" title="class in com.drew.metadata">Metadata</A> <B>readMetadata</B>(java.io.InputStream&nbsp;inputStream)</PRE>
+public static void <B>processIfd</B>(<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff">TiffHandler</A>&nbsp;handler,
+                              <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
+                              java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
+                              int&nbsp;ifdOffset,
+                              int&nbsp;tiffHeaderOffset)
+                       throws java.io.IOException</PRE>
 <DL>
+<DD>Processes a TIFF IFD.
+ <p/>
+ IFD Header:
+ <ul>
+     <li><b>2 bytes</b> number of tags</li>
+ </ul>
+ Tag structure:
+ <ul>
+     <li><b>2 bytes</b> tag type</li>
+     <li><b>2 bytes</b> format code (values 1 to 12, inclusive)</li>
+     <li><b>4 bytes</b> component count</li>
+     <li><b>4 bytes</b> inline value, or offset pointer if too large to fit in four bytes</li>
+ </ul>
+<P>
 <DD><DL>
-</DL>
+<DT><B>Parameters:</B><DD><CODE>handler</CODE> - the <A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><CODE>TiffHandler</CODE></A> that will coordinate processing and accept read values<DD><CODE>reader</CODE> - the <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang"><CODE>RandomAccessReader</CODE></A> from which the data should be read<DD><CODE>processedIfdOffsets</CODE> - the set of visited IFD offsets, to avoid revisiting the same IFD in an endless loop<DD><CODE>ifdOffset</CODE> - the offset within <code>reader</code> at which the IFD data starts<DD><CODE>tiffHeaderOffset</CODE> - the offset within <code>reader</code> at which the TIFF header starts
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE> - an error occurred while accessing the required data</DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -229,7 +262,7 @@ public static <A HREF="../../../../com/drew/metadata/Metadata.html" title="class
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
-  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffMetadataReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffReader.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
   <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
@@ -244,11 +277,11 @@ public static <A HREF="../../../../com/drew/metadata/Metadata.html" title="class
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffProcessingException.html" title="class in com.drew.imaging.tiff"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffMetadataReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="TiffMetadataReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffReader.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TiffReader.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {

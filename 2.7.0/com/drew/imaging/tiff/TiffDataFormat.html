@@ -1,0 +1,738 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--NewPage-->
+<HTML>
+<HEAD>
+<TITLE>
+TiffDataFormat (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)
+</TITLE>
+
+<META NAME="keywords" CONTENT="com.drew.imaging.tiff.TiffDataFormat class">
+
+<LINK REL ="stylesheet" TYPE="text/css" HREF="../../../../stylesheet.css" TITLE="Style">
+
+<SCRIPT type="text/javascript">
+function windowTitle()
+{
+    parent.document.title="TiffDataFormat (metadata-extractor - Javadoc - Extracts Exif, IPTC, XMP, ICC and other metadata from image files)";
+}
+</SCRIPT>
+<NOSCRIPT>
+</NOSCRIPT>
+
+</HEAD>
+
+<BODY BGCOLOR="white" onload="windowTitle();">
+
+
+<!-- ========= START OF TOP NAVBAR ======= -->
+<A NAME="navbar_top"><!-- --></A>
+<A HREF="#skip-navbar_top" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_top_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffDataFormat.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffDataFormat.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TiffDataFormat.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_top"></A>
+<!-- ========= END OF TOP NAVBAR ========= -->
+
+<HR>
+<!-- ======== START OF CLASS DATA ======== -->
+<H2>
+<FONT SIZE="-1">
+com.drew.imaging.tiff</FONT>
+<BR>
+Class TiffDataFormat</H2>
+<PRE>
+java.lang.Object
+  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.drew.imaging.tiff.TiffDataFormat</B>
+</PRE>
+<HR>
+<DL>
+<DT><PRE>public class <B>TiffDataFormat</B><DT>extends java.lang.Object</DL>
+</PRE>
+
+<P>
+An enumeration of data formats used by the TIFF specification.
+<P>
+
+<P>
+<DL>
+<DT><B>Author:</B></DT>
+  <DD>Drew Noakes http://drewnoakes.com</DD>
+</DL>
+<HR>
+
+<P>
+<!-- =========== FIELD SUMMARY =========== -->
+
+<A NAME="field_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Field Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_DOUBLE">CODE_DOUBLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT16_S">CODE_INT16_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT16_U">CODE_INT16_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT32_S">CODE_INT32_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT32_U">CODE_INT32_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT8_S">CODE_INT8_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_INT8_U">CODE_INT8_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_RATIONAL_S">CODE_RATIONAL_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_RATIONAL_U">CODE_RATIONAL_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_SINGLE">CODE_SINGLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_STRING">CODE_STRING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#CODE_UNDEFINED">CODE_UNDEFINED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#DOUBLE">DOUBLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT16_S">INT16_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT16_U">INT16_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT32_S">INT32_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT32_U">INT32_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT8_S">INT8_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#INT8_U">INT8_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#RATIONAL_S">RATIONAL_S</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#RATIONAL_U">RATIONAL_U</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#SINGLE">SINGLE</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#STRING">STRING</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#UNDEFINED">UNDEFINED</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#fromTiffFormatCode(int)">fromTiffFormatCode</A></B>(int&nbsp;tiffFormatCode)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#getComponentSizeBytes()">getComponentSizeBytes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#getTiffFormatCode()">getTiffFormatCode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
+<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</CODE></TD>
+</TR>
+</TABLE>
+&nbsp;
+<P>
+
+<!-- ============ FIELD DETAIL =========== -->
+
+<A NAME="field_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Field Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="CODE_INT8_U"><!-- --></A><H3>
+CODE_INT8_U</H3>
+<PRE>
+public static final int <B>CODE_INT8_U</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT8_U">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_STRING"><!-- --></A><H3>
+CODE_STRING</H3>
+<PRE>
+public static final int <B>CODE_STRING</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_STRING">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_INT16_U"><!-- --></A><H3>
+CODE_INT16_U</H3>
+<PRE>
+public static final int <B>CODE_INT16_U</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT16_U">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_INT32_U"><!-- --></A><H3>
+CODE_INT32_U</H3>
+<PRE>
+public static final int <B>CODE_INT32_U</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT32_U">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_RATIONAL_U"><!-- --></A><H3>
+CODE_RATIONAL_U</H3>
+<PRE>
+public static final int <B>CODE_RATIONAL_U</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_RATIONAL_U">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_INT8_S"><!-- --></A><H3>
+CODE_INT8_S</H3>
+<PRE>
+public static final int <B>CODE_INT8_S</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT8_S">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_UNDEFINED"><!-- --></A><H3>
+CODE_UNDEFINED</H3>
+<PRE>
+public static final int <B>CODE_UNDEFINED</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_UNDEFINED">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_INT16_S"><!-- --></A><H3>
+CODE_INT16_S</H3>
+<PRE>
+public static final int <B>CODE_INT16_S</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT16_S">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_INT32_S"><!-- --></A><H3>
+CODE_INT32_S</H3>
+<PRE>
+public static final int <B>CODE_INT32_S</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_INT32_S">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_RATIONAL_S"><!-- --></A><H3>
+CODE_RATIONAL_S</H3>
+<PRE>
+public static final int <B>CODE_RATIONAL_S</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_RATIONAL_S">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_SINGLE"><!-- --></A><H3>
+CODE_SINGLE</H3>
+<PRE>
+public static final int <B>CODE_SINGLE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_SINGLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="CODE_DOUBLE"><!-- --></A><H3>
+CODE_DOUBLE</H3>
+<PRE>
+public static final int <B>CODE_DOUBLE</B></PRE>
+<DL>
+<DL>
+<DT><B>See Also:</B><DD><A HREF="../../../../constant-values.html#com.drew.imaging.tiff.TiffDataFormat.CODE_DOUBLE">Constant Field Values</A></DL>
+</DL>
+<HR>
+
+<A NAME="INT8_U"><!-- --></A><H3>
+INT8_U</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT8_U</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="STRING"><!-- --></A><H3>
+STRING</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>STRING</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="INT16_U"><!-- --></A><H3>
+INT16_U</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT16_U</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="INT32_U"><!-- --></A><H3>
+INT32_U</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT32_U</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="RATIONAL_U"><!-- --></A><H3>
+RATIONAL_U</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>RATIONAL_U</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="INT8_S"><!-- --></A><H3>
+INT8_S</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT8_S</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="UNDEFINED"><!-- --></A><H3>
+UNDEFINED</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>UNDEFINED</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="INT16_S"><!-- --></A><H3>
+INT16_S</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT16_S</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="INT32_S"><!-- --></A><H3>
+INT32_S</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>INT32_S</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="RATIONAL_S"><!-- --></A><H3>
+RATIONAL_S</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>RATIONAL_S</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="SINGLE"><!-- --></A><H3>
+SINGLE</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>SINGLE</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+<HR>
+
+<A NAME="DOUBLE"><!-- --></A><H3>
+DOUBLE</H3>
+<PRE>
+public static final <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>DOUBLE</B></PRE>
+<DL>
+<DL>
+</DL>
+</DL>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="fromTiffFormatCode(int)"><!-- --></A><H3>
+fromTiffFormatCode</H3>
+<PRE>
+public static <A HREF="../../../../com/drew/imaging/tiff/TiffDataFormat.html" title="class in com.drew.imaging.tiff">TiffDataFormat</A> <B>fromTiffFormatCode</B>(int&nbsp;tiffFormatCode)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getComponentSizeBytes()"><!-- --></A><H3>
+getComponentSizeBytes</H3>
+<PRE>
+public int <B>getComponentSizeBytes</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getTiffFormatCode()"><!-- --></A><H3>
+getTiffFormatCode</H3>
+<PRE>
+public int <B>getTiffFormatCode</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public java.lang.String <B>toString</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>toString</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<!-- ========= END OF CLASS DATA ========= -->
+<HR>
+
+
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<A NAME="navbar_bottom"><!-- --></A>
+<A HREF="#skip-navbar_bottom" title="Skip navigation links"></A>
+<TABLE BORDER="0" WIDTH="100%" CELLPADDING="1" CELLSPACING="0" SUMMARY="">
+<TR>
+<TD COLSPAN=2 BGCOLOR="#EEEEFF" CLASS="NavBarCell1">
+<A NAME="navbar_bottom_firstrow"><!-- --></A>
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="3" SUMMARY="">
+  <TR ALIGN="center" VALIGN="top">
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../overview-summary.html"><FONT CLASS="NavBarFont1"><B>Overview</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-summary.html"><FONT CLASS="NavBarFont1"><B>Package</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#FFFFFF" CLASS="NavBarCell1Rev"> &nbsp;<FONT CLASS="NavBarFont1Rev"><B>Class</B></FONT>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="class-use/TiffDataFormat.html"><FONT CLASS="NavBarFont1"><B>Use</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="package-tree.html"><FONT CLASS="NavBarFont1"><B>Tree</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../deprecated-list.html"><FONT CLASS="NavBarFont1"><B>Deprecated</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../index-all.html"><FONT CLASS="NavBarFont1"><B>Index</B></FONT></A>&nbsp;</TD>
+  <TD BGCOLOR="#EEEEFF" CLASS="NavBarCell1">    <A HREF="../../../../help-doc.html"><FONT CLASS="NavBarFont1"><B>Help</B></FONT></A>&nbsp;</TD>
+  </TR>
+</TABLE>
+</TD>
+<TD ALIGN="right" VALIGN="top" ROWSPAN=3><EM>
+<a href='http://www.drewnoakes.com/code/exif/' title='Go to the project home page.'><img src='http://metadata-extractor.googlecode.com/git/Resources/metadata-extractor-logo-131x30.png' border=0 alt='Metadata Extractor Logo'></a></EM>
+</TD>
+</TR>
+
+<TR>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+&nbsp;PREV CLASS&nbsp;
+&nbsp;<A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html" title="interface in com.drew.imaging.tiff"><B>NEXT CLASS</B></A></FONT></TD>
+<TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
+  <A HREF="../../../../index.html?com/drew/imaging/tiff/TiffDataFormat.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="TiffDataFormat.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+&nbsp;<SCRIPT type="text/javascript">
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>');
+  }
+  //-->
+</SCRIPT>
+<NOSCRIPT>
+  <A HREF="../../../../allclasses-noframe.html"><B>All Classes</B></A>
+</NOSCRIPT>
+
+
+</FONT></TD>
+</TR>
+<TR>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+<TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
+DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+</TR>
+</TABLE>
+<A NAME="skip-navbar_bottom"></A>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+
+<HR>
+<i>Copyright &#169; 2002-2013 Drew Noakes. All Rights Reserved.</i>
+<script src='http://www.google-analytics.com/urchin.js' type='text/javascript'></script>
+<script type='text/javascript'>
+_uacct = 'UA-936661-1';
+urchinTracker();
+</script>
+</BODY>
+</HTML>

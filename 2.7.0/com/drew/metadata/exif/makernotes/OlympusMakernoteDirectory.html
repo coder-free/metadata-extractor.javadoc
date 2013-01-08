@@ -52,7 +52,7 @@ function windowTitle()
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/PanasonicMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.CameraSettings.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="OlympusMakernoteDirectory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -72,7 +72,7 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
@@ -98,7 +98,7 @@ java.lang.Object
 </PRE>
 
 <P>
-The Olympus makernote is used by many manufacturers (Konica, Minolta and Epson...), and as such contains some tags
+The Olympus makernote is used by many manufacturers (Epson, Konica, Minolta and Agfa...), and as such contains some tags
  that appear specific to those manufacturers.
 <P>
 
@@ -110,7 +110,24 @@ The Olympus makernote is used by many manufacturers (Konica, Minolta and Epson..
 <HR>
 
 <P>
-<!-- =========== FIELD SUMMARY =========== -->
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+
+<A NAME="nested_class_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Nested Class Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;class</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.CameraSettings.html" title="class in com.drew.metadata.exif.makernotes">OlympusMakernoteDirectory.CameraSettings</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;<!-- =========== FIELD SUMMARY =========== -->
 
 <A NAME="field_summary"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -610,6 +627,23 @@ The Olympus makernote is used by many manufacturers (Konica, Minolta and Epson..
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Provides the map of tag names, hashed by tag type identifier.</TD>
 </TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.html#isIntervalMode()">isIntervalMode</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.html#setByteArray(int, byte[])">setByteArray</A></B>(int&nbsp;tagType,
+             byte[]&nbsp;bytes)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sets a <code>byte[]</code> (array) for the specified tag.</TD>
+</TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.drew.metadata.Directory"><!-- --></A>
 <TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
@@ -617,7 +651,7 @@ The Olympus makernote is used by many manufacturers (Konica, Minolta and Epson..
 <TH ALIGN="left"><B>Methods inherited from class com.drew.metadata.<A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#addError(java.lang.String)">addError</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#containsTag(int)">containsTag</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBoolean(int)">getBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBooleanObject(int)">getBooleanObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getByteArray(int)">getByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int, java.util.TimeZone)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDescription(int)">getDescription</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDouble(int)">getDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDoubleObject(int)">getDoubleObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrorCount()">getErrorCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrors()">getErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloat(int)">getFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloatObject(int)">getFloatObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInt(int)">getInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getIntArray(int)">getIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInteger(int)">getInteger</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLong(int)">getLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLongObject(int)">getLongObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getObject(int)">getObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRational(int)">getRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRationalArray(int)">getRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int, java.lang.String)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getStringArray(int)">getStringArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagCount()">getTagCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagName(int)">getTagName</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTags()">getTags</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#hasErrors()">hasErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setBoolean(int, boolean)">setBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">setByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDate(int, java.util.Date)">setDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDescriptor(com.drew.metadata.TagDescriptor)">setDescriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDouble(int, double)">setDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDoubleArray(int, double[])">setDoubleArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloat(int, float)">setFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloatArray(int, float[])">setFloatArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setInt(int, int)">setInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">setIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setLong(int, long)">setLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObject(int, java.lang.Object)">setObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRational(int, com.drew.lang.Rational)">setRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setString(int, java.lang.String)">setString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setStringArray(int, java.lang.String[])">setStringArray</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#addError(java.lang.String)">addError</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#containsTag(int)">containsTag</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBoolean(int)">getBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getBooleanObject(int)">getBooleanObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getByteArray(int)">getByteArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDate(int, java.util.TimeZone)">getDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDescription(int)">getDescription</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDouble(int)">getDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getDoubleObject(int)">getDoubleObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrorCount()">getErrorCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getErrors()">getErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloat(int)">getFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getFloatObject(int)">getFloatObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInt(int)">getInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getIntArray(int)">getIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getInteger(int)">getInteger</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLong(int)">getLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getLongObject(int)">getLongObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getObject(int)">getObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRational(int)">getRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getRationalArray(int)">getRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getString(int, java.lang.String)">getString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getStringArray(int)">getStringArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagCount()">getTagCount</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTagName(int)">getTagName</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#getTags()">getTags</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#hasErrors()">hasErrors</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setBoolean(int, boolean)">setBoolean</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDate(int, java.util.Date)">setDate</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDescriptor(com.drew.metadata.TagDescriptor)">setDescriptor</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDouble(int, double)">setDouble</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setDoubleArray(int, double[])">setDoubleArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloat(int, float)">setFloat</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setFloatArray(int, float[])">setFloatArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setInt(int, int)">setInt</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setIntArray(int, int[])">setIntArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setLong(int, long)">setLong</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObject(int, java.lang.Object)">setObject</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setObjectArray(int, java.lang.Object)">setObjectArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRational(int, com.drew.lang.Rational)">setRational</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setRationalArray(int, com.drew.lang.Rational[])">setRationalArray</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setString(int, java.lang.String)">setString</A>, <A HREF="../../../../../com/drew/metadata/Directory.html#setStringArray(int, java.lang.String[])">setStringArray</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -1283,6 +1317,35 @@ public java.lang.String <B>getName</B>()</PRE>
 </DL>
 <HR>
 
+<A NAME="setByteArray(int, byte[])"><!-- --></A><H3>
+setByteArray</H3>
+<PRE>
+public void <B>setByteArray</B>(int&nbsp;tagType,
+                         byte[]&nbsp;bytes)</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">Directory</A></CODE></B></DD>
+<DD>Sets a <code>byte[]</code> (array) for the specified tag.
+<P>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/drew/metadata/Directory.html#setByteArray(int, byte[])">setByteArray</A></CODE> in class <CODE><A HREF="../../../../../com/drew/metadata/Directory.html" title="class in com.drew.metadata">Directory</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>tagType</CODE> - the tag identifier<DD><CODE>bytes</CODE> - the byte array to store</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isIntervalMode()"><!-- --></A><H3>
+isIntervalMode</H3>
+<PRE>
+public boolean <B>isIntervalMode</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="getTagNameMap()"><!-- --></A><H3>
 getTagNameMap</H3>
 <PRE>
@@ -1331,7 +1394,7 @@ protected java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt; <B>getTagN
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
 &nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/PanasonicMakernoteDescriptor.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.CameraSettings.html" title="class in com.drew.metadata.exif.makernotes"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../../index.html?com/drew/metadata/exif/makernotes/OlympusMakernoteDirectory.html" target="_top"><B>FRAMES</B></A>  &nbsp;
 &nbsp;<A HREF="OlympusMakernoteDirectory.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
@@ -1351,7 +1414,7 @@ protected java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt; <B>getTagN
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;<A HREF="#nested_class_summary">NESTED</A>&nbsp;|&nbsp;<A HREF="#field_summary">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
 DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>

@@ -124,11 +124,12 @@ Interface TiffHandler</H2>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+<TD><CODE><B><A HREF="../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
                  java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                  int&nbsp;tiffHeaderOffset,
                  <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                 int&nbsp;tagId)</CODE>
+                 int&nbsp;tagId,
+                 int&nbsp;byteCount)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -439,14 +440,15 @@ void <B>completed</B>(<A HREF="../../../../com/drew/lang/RandomAccessReader.html
 </DL>
 <HR>
 
-<A NAME="customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)"><!-- --></A><H3>
+<A NAME="customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)"><!-- --></A><H3>
 customProcessTag</H3>
 <PRE>
 boolean <B>customProcessTag</B>(int&nbsp;makernoteOffset,
                          java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                          int&nbsp;tiffHeaderOffset,
                          <A HREF="../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                         int&nbsp;tagId)
+                         int&nbsp;tagId,
+                         int&nbsp;byteCount)
                          throws java.io.IOException</PRE>
 <DL>
 <DD><DL>

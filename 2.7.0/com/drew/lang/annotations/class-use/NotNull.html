@@ -1038,11 +1038,12 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
                  java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                  int&nbsp;tiffHeaderOffset,
                  <A HREF="../../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                 int&nbsp;tagId)</CODE>
+                 int&nbsp;tagId,
+                 int&nbsp;byteCount)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -1050,11 +1051,12 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+<TD><CODE><B>TiffHandler.</B><B><A HREF="../../../../../com/drew/imaging/tiff/TiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
                  java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                  int&nbsp;tiffHeaderOffset,
                  <A HREF="../../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                 int&nbsp;tagId)</CODE>
+                 int&nbsp;tagId,
+                 int&nbsp;byteCount)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -1447,6 +1449,33 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B>StringUtil.</B><B><A HREF="../../../../../com/drew/lang/StringUtil.html#join(java.lang.Iterable, java.lang.String)">join</A></B>(java.lang.Iterable&lt;? extends java.lang.CharSequence&gt;&nbsp;strings,
+     java.lang.String&nbsp;delimiter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" SUMMARY="">
+<TR ALIGN="right" VALIGN="">
+<TD NOWRAP><FONT SIZE="-1">
+<CODE>&lt;T extends java.lang.CharSequence&gt; 
+<BR>
+java.lang.String</CODE></FONT></TD>
+</TR>
+</TABLE>
+</CODE></FONT></TD>
+<TD><CODE><B>StringUtil.</B><B><A HREF="../../../../../com/drew/lang/StringUtil.html#join(T[], java.lang.String)">join</A></B>(T[]&nbsp;strings,
+     java.lang.String&nbsp;delimiter)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
 <TD><CODE><B>GeoLocation.</B><B><A HREF="../../../../../com/drew/lang/GeoLocation.html#toDMSString()">toDMSString</A></B>()</CODE>
 
@@ -1481,6 +1510,14 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
 <TD><CODE><B>CompoundException.</B><B><A HREF="../../../../../com/drew/lang/CompoundException.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B>StringUtil.</B><B><A HREF="../../../../../com/drew/lang/StringUtil.html#urlEncode(java.lang.String)">urlEncode</A></B>(java.lang.String&nbsp;name)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -1603,6 +1640,14 @@ java.lang.String</CODE></FONT></TD>
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B>CompoundException.</B><B><A HREF="../../../../../com/drew/lang/CompoundException.html#printStackTrace(java.io.PrintWriter)">printStackTrace</A></B>(java.io.PrintWriter&nbsp;s)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B>StringUtil.</B><B><A HREF="../../../../../com/drew/lang/StringUtil.html#urlEncode(java.lang.String)">urlEncode</A></B>(java.lang.String&nbsp;name)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -2492,11 +2537,12 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../../com/drew/metadata/exif/ExifTiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../../com/drew/metadata/exif/ExifTiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
                  java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                  int&nbsp;tiffHeaderOffset,
                  <A HREF="../../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                 int&nbsp;tagId)</CODE>
+                 int&nbsp;tagId,
+                 int&nbsp;byteCount)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -2504,11 +2550,12 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../../com/drew/metadata/exif/ExifTiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
+<TD><CODE><B>ExifTiffHandler.</B><B><A HREF="../../../../../com/drew/metadata/exif/ExifTiffHandler.html#customProcessTag(int, java.util.Set, int, com.drew.lang.RandomAccessReader, int, int)">customProcessTag</A></B>(int&nbsp;makernoteOffset,
                  java.util.Set&lt;java.lang.Integer&gt;&nbsp;processedIfdOffsets,
                  int&nbsp;tiffHeaderOffset,
                  <A HREF="../../../../../com/drew/lang/RandomAccessReader.html" title="class in com.drew.lang">RandomAccessReader</A>&nbsp;reader,
-                 int&nbsp;tagId)</CODE>
+                 int&nbsp;tagId,
+                 int&nbsp;byteCount)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -2666,6 +2713,14 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected static&nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B>RicohMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/RicohMakernoteDirectory.html#_tagNameMap">_tagNameMap</A></B></CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected static&nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
 <TD><CODE><B>PentaxMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/PentaxMakernoteDirectory.html#_tagNameMap">_tagNameMap</A></B></CODE>
 
 <BR>
@@ -2802,6 +2857,14 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B>RicohMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/RicohMakernoteDirectory.html#getName()">getName</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
 <TD><CODE><B>PentaxMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/PentaxMakernoteDirectory.html#getName()">getName</A></B>()</CODE>
 
 <BR>
@@ -2923,6 +2986,14 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>protected &nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
 <TD><CODE><B>SanyoMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/SanyoMakernoteDirectory.html#getTagNameMap()">getTagNameMap</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;java.util.HashMap&lt;java.lang.Integer,java.lang.String&gt;</CODE></FONT></TD>
+<TD><CODE><B>RicohMakernoteDirectory.</B><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/RicohMakernoteDirectory.html#getTagNameMap()">getTagNameMap</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -3125,6 +3196,12 @@ Uses of <A HREF="../../../../../com/drew/lang/annotations/NotNull.html" title="a
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/PentaxMakernoteDescriptor.html#PentaxMakernoteDescriptor(com.drew.metadata.exif.makernotes.PentaxMakernoteDirectory)">PentaxMakernoteDescriptor</A></B>(<A HREF="../../../../../com/drew/metadata/exif/makernotes/PentaxMakernoteDirectory.html" title="class in com.drew.metadata.exif.makernotes">PentaxMakernoteDirectory</A>&nbsp;directory)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD><CODE><B><A HREF="../../../../../com/drew/metadata/exif/makernotes/RicohMakernoteDescriptor.html#RicohMakernoteDescriptor(com.drew.metadata.exif.makernotes.RicohMakernoteDirectory)">RicohMakernoteDescriptor</A></B>(<A HREF="../../../../../com/drew/metadata/exif/makernotes/RicohMakernoteDirectory.html" title="class in com.drew.metadata.exif.makernotes">RicohMakernoteDirectory</A>&nbsp;directory)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
